@@ -1,53 +1,100 @@
-function RegisterPage() {
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo/logoN.png";
+
+export default function RegisterPage() {
   return (
-    <section className="min-h-screen bg-black py-20">
-      <div className="container max-w-3xl">
-        <div className="card p-8">
-          <h1 className="text-4xl font-black uppercase mb-8">
-            Crear cuenta
-          </h1>
+    <section className="register-page">
 
-          <div className="grid md:grid-cols-2 gap-4">
+      <div className="register-overlay" />
+
+      <div className="register-card">
+        
+        <Link 
+          to="/"
+          className="auth-back-button"
+        >
+          ← Inicio
+        </Link>
+        
+        <Link
+          to="/"
+          className="register-logo-link"
+        >
+          <img
+            src={logo}
+            alt="American Services"
+            className="register-logo"
+          />
+        </Link>
+
+        <h1>
+          Crear Cuenta
+        </h1>
+
+        <p>
+          Regístrate y comienza a acumular
+          puntos en Car Wash, Barbería,
+          Cafetería y Coworking.
+        </p>
+
+        <form className="register-form">
+
+          <div className="register-grid">
 
             <input
+              type="text"
               placeholder="Nombres"
-              className="p-4 bg-zinc-900 rounded-xl"
             />
 
             <input
+              type="text"
               placeholder="Apellidos"
-              className="p-4 bg-zinc-900 rounded-xl"
             />
 
             <input
-              placeholder="Correo"
-              className="p-4 bg-zinc-900 rounded-xl"
+              type="email"
+              placeholder="Correo electrónico"
             />
 
             <input
+              type="tel"
               placeholder="Teléfono"
-              className="p-4 bg-zinc-900 rounded-xl"
             />
 
             <input
+              type="text"
               placeholder="Usuario"
-              className="p-4 bg-zinc-900 rounded-xl"
             />
 
             <input
               type="password"
               placeholder="Contraseña"
-              className="p-4 bg-zinc-900 rounded-xl"
             />
+
           </div>
 
-          <button className="btn-primary mt-8">
-            Registrarme
+          <button
+            type="submit"
+            className="btn-primary"
+          >
+            Crear Cuenta
           </button>
-        </div>
-      </div>
-    </section>
-  )
-}
 
-export default RegisterPage
+        </form>
+
+        <div className="login-divider">
+          <span>o</span>
+        </div>
+
+        <Link
+          to="/login"
+          className="btn-secondary register-login"
+        >
+          Ya tengo una cuenta
+        </Link>
+         
+      </div>
+
+    </section>
+  );
+}

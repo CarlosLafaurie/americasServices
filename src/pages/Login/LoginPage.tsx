@@ -1,31 +1,125 @@
-function LoginPage() {
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import logo from "@/assets/logo/logoN.png";
+
+import { useAuth } from "@/hooks/useAuth";
+
+export default function LoginPage() {
+  const { login } = useAuth();
+
+  const navigate = useNavigate();
+
+  const [username, setUsername] =
+    useState("");
+
+  const [password, setPassword] =
+    useState("");
+
+  const handleSubmit = (
+    e: React.FormEvent
+  ) => {
+    e.preventDefault();
+
+    const success =
+      login(username, password);
+
+    if (!success) {
+      alert("Credenciales inválidas");
+      return;
+    }
+
+    navigate("/");
+  };
+
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center">
-      <div className="card w-full max-w-md p-8">
-        <h1 className="text-4xl font-black uppercase mb-8">
-          Iniciar sesión
+    <section className="login-page">
+
+      <div className="login-overlay" />
+
+      <div className="login-card">
+
+         <Link
+          to="/"
+          className="auth-back-button"
+        >
+          ← Inicio
+        </Link>
+
+       <Link
+          to="/"
+          className="login-logo-link"
+        >
+          <img
+            src={logo}
+            alt="American Services"
+            className="login-logo"
+          />
+        </Link>
+
+        <h1>
+          Bienvenido de nuevo
         </h1>
 
-        <div className="space-y-4">
+        <p>
+          Inicia sesión para consultar tus
+          puntos, beneficios y perfil.
+        </p>
+
+        <form
+          onSubmit={handleSubmit}
+          className="login-form"
+        >
+
           <input
             type="text"
             placeholder="Usuario"
-            className="w-full p-4 bg-zinc-900 rounded-xl"
+            value={username}
+            onChange={(e) =>
+              setUsername(e.target.value)
+            }
           />
 
           <input
             type="password"
             placeholder="Contraseña"
-            className="w-full p-4 bg-zinc-900 rounded-xl"
+            value={password}
+            onChange={(e) =>
+              setPassword(e.target.value)
+            }
           />
 
-          <button className="btn-primary w-full">
+          <button
+            type="submit"
+            className="btn-primary"
+          >
             Ingresar
           </button>
-        </div>
-      </div>
-    </section>
-  )
-}
 
-export default LoginPage
+        </form>
+
+        <div className="login-divider">
+          <span>o</span>
+        </div>
+
+        <Link
+          to="/register"
+          className="btn-secondary login-register"
+        >
+          Crear cuenta
+        </Link>
+
+        <div className="login-demo">
+
+          <strong>Demo:</strong>
+
+          <span>
+            admin / 123456
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
