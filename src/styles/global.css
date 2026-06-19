@@ -1286,3 +1286,90 @@ grid-template-columns: 1fr;
     url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg")
     center center / cover;
 }
+
+.service-card-image {
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.service-card-image:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+}
+
+.button,
+.btn-primary,
+.btn-secondary {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+.button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.25);
+}
+
+.button,
+.btn-primary,
+.btn-secondary {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+.button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
+}
+
+.page-hero-content {
+  animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-badge {
+  animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-title {
+  animation: heroFadeUp 1s ease .15s forwards;
+
+  opacity: 0;
+}
+
+.hero-description {
+  animation: heroFadeUp 1s ease .3s forwards;
+
+  opacity: 0;
+}
+
+.hero-buttons {
+  animation: heroFadeUp 1s ease .45s forwards;
+
+  opacity: 0;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
