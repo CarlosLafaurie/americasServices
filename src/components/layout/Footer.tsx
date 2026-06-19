@@ -1,4 +1,5 @@
 import logo from "../../assets/logo/logoN.png";
+import ioiLogo from "../../assets/logo/IOI_logo_negro.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -109,6 +110,18 @@ export default function Footer() {
 
         </div>
 
+        <div className="footer-credit">
+
+          <img
+            src={ioiLogo}
+            alt="Innovative Online Industries"
+            className="footer-credit-logo"
+          />
+
+          <span>
+            Powered by Innovative Online Industries
+          </span>
+        </div>
       </div>
 
     </footer>
