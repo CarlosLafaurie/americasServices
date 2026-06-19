@@ -101,7 +101,7 @@ export default function Footer() {
 
           <div className="footer-socials">
 
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/americas_services?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
             <a href="#">Facebook</a>
             <a href="#">TikTok</a>
 

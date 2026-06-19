@@ -1,39 +1,168 @@
-function AdminPage() {
+import { users } from "@/mock/users";
+
+export default function AdminPage() {
+  const totalPoints = users.reduce(
+    (acc, user) => acc + user.points,
+    0
+  );
+
   return (
-    <section className="py-20">
+    <section className="admin-page">
+
       <div className="container">
 
-        <h1 className="text-5xl font-black mb-10">
-          Dashboard
-        </h1>
+        <div className="admin-hero">
 
-        <div className="grid lg:grid-cols-4 gap-6 mb-10">
+          <div className="admin-hero-content">
 
-          <div className="card p-6">
-            Clientes
-          </div>
+            <span className="admin-badge">
+              PANEL ADMINISTRATIVO
+            </span>
 
-          <div className="card p-6">
-            Reservas
-          </div>
+            <h1>
+              Gestión de Usuarios
+            </h1>
 
-          <div className="card p-6">
-            Ventas
-          </div>
+            <p>
+              Administra usuarios, consulta
+              información general y supervisa
+              el programa de puntos.
+            </p>
 
-          <div className="card p-6">
-            Puntos
+            <div className="admin-summary">
+
+              <span>
+                Puntos totales del sistema
+              </span>
+
+              <strong>
+                {totalPoints.toLocaleString()}
+              </strong>
+
+            </div>
+
           </div>
 
         </div>
 
-        <div className="card p-8">
-          Tabla de clientes
+        <div className="admin-stats">
+
+          <div className="admin-stat-card">
+
+            <h3>
+              {users.length}
+            </h3>
+
+            <span>
+              Usuarios registrados
+            </span>
+
+          </div>
+
+          <div className="admin-stat-card">
+
+            <h3>
+              {totalPoints.toLocaleString()}
+            </h3>
+
+            <span>
+              Puntos acumulados
+            </span>
+
+          </div>
+
+        </div>
+
+        <div className="admin-users">
+
+          {users.map((user) => (
+
+            <div
+              key={user.id}
+              className="admin-user-card"
+            >
+
+              <div className="admin-user-top">
+
+                <div>
+
+                  <h3>
+                    {user.firstName}{" "}
+                    {user.lastName}
+                  </h3>
+
+                  <span>
+                    @{user.username}
+                  </span>
+
+                </div>
+
+                <span
+                  className={
+                    user.role === "admin"
+                      ? "admin-role admin"
+                      : "admin-role"
+                  }
+                >
+                  {user.role}
+                </span>
+
+              </div>
+
+              <div className="admin-user-info">
+
+                <div>
+
+                  <strong>Email</strong>
+
+                  <span>
+                    {user.email}
+                  </span>
+
+                </div>
+
+                <div>
+
+                  <strong>Teléfono</strong>
+
+                  <span>
+                    {user.phone}
+                  </span>
+
+                </div>
+
+                <div>
+
+                  <strong>Documento</strong>
+
+                  <span>
+                    {user.identification}
+                  </span>
+
+                </div>
+
+              </div>
+
+              <div className="admin-user-points">
+
+                <span>
+                  Puntos disponibles
+                </span>
+
+                <strong>
+                  {user.points.toLocaleString()}
+                </strong>
+
+              </div>
+
+            </div>
+
+          ))}
+
         </div>
 
       </div>
-    </section>
-  )
-}
 
-export default AdminPage
+    </section>
+  );
+}

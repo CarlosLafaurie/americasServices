@@ -113,7 +113,7 @@ export default function LoginPage() {
           <strong>Demo:</strong>
 
           <span>
-            admin / 123456
+            cliente / 123456
           </span>
 
         </div>

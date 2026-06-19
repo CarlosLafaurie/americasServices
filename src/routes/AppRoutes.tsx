@@ -11,6 +11,7 @@ import CoworkingPage from "@/pages/Coworking/CoworkingPage";
 import LoginPage from "@/pages/Login/LoginPage";
 import RegisterPage from "@/pages/Register/RegisterPage";
 import AdminPage from "@/pages/Admin/AdminPage";
+import ProfilePage from "@/pages/Profile/ProfilePage";
 
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -29,6 +30,7 @@ export default function AppRoutes() {
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/profile" element={ <ProtectedRoute> <ProfilePage /> </ProtectedRoute> } />
 
         <Route
           path="/admin"

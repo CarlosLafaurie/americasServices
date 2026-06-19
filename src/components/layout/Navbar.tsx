@@ -1,47 +1,76 @@
 import { Link } from "react-router-dom";
+
 import logo from "../../assets/logo/logoN.png";
 
+import { useAuth } from "@/hooks/useAuth";
+
 export default function Navbar() {
-const isLoggedIn = false;
+  const { user } = useAuth();
 
-return ( <header className="navbar-wrapper">
+  return (
+    <header className="navbar-wrapper">
 
-  <nav className="navbar">
+      <nav className="navbar">
 
-    <Link to="/" className="navbar-brand">
+        <Link
+          to="/"
+          className="navbar-brand"
+        >
+          <img
+            src={logo}
+            alt="American Services"
+            className="navbar-logo"
+          />
+        </Link>
 
-      <img
-        src={logo}
-        alt="American Services"
-        className="navbar-logo"
-      />
+        <div className="navbar-links">
 
-    </Link>
+          <Link to="/">
+            Inicio
+          </Link>
 
-    <div className="navbar-links">
+          <Link to="/carwash">
+            Car Wash
+          </Link>
 
-      <Link to="/">Inicio</Link>
-      <Link to="/carwash">Car Wash</Link>
-      <Link to="/barberia">Barbería</Link>
-      <Link to="/cafeteria">Cafetería</Link>
-      <Link to="/coworking">Coworking</Link>
+          <Link to="/barberia">
+            Barbería
+          </Link>
 
-    </div>
+          <Link to="/cafeteria">
+            Cafetería
+          </Link>
 
-    <div className="navbar-actions">
+          <Link to="/coworking">
+            Coworking
+          </Link>
 
-      <Link
-        to={isLoggedIn ? "/profile" : "/login"}
-        className="navbar-login"
-      >
-        {isLoggedIn ? "Perfil" : "Iniciar Sesión"}
-      </Link>
+        </div>
 
-    </div>
+        <div className="navbar-actions">
 
-  </nav>
+          {user?.role === "admin" && (
+            <Link
+              to="/admin"
+              className="navbar-admin"
+            >
+              Admin
+            </Link>
+          )}
 
-</header>
+          <Link
+            to={user ? "/profile" : "/login"}
+            className="navbar-login"
+          >
+            {user
+              ? `Hola, ${user.firstName}`
+              : "Iniciar Sesión"}
+          </Link>
 
-);
+        </div>
+
+      </nav>
+
+    </header>
+  );
 }
