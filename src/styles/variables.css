@@ -1,0 +1,95 @@
+:root {
+  /* ==========================
+      COLORS
+   ========================== */
+
+  --color-primary: #d4af37;
+  --color-primary-light: #f0d675;
+  --color-primary-dark: #b8941f;
+
+  --bg-page: #050505;
+  --bg-surface: #0c0c0c;
+  --bg-card: #111111;
+
+  --text-primary: #ffffff;
+  --text-secondary: #d6d6d6;
+  --text-muted: #8f8f8f;
+
+  --border: rgba(212, 175, 55, 0.12);
+  --border-strong: rgba(212, 175, 55, 0.22);
+
+  /* ==========================
+      SHADOWS
+   ========================== */
+
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+  --shadow-md: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+
+  /* ==========================
+      BORDER RADIUS
+   ========================== */
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+
+  /* ==========================
+      LAYOUT
+   ========================== */
+
+  --max-width: 1400px;
+
+  /* ==========================
+      TRANSITIONS
+   ========================== */
+
+  --transition: 0.3s ease;
+}
+
+:root {
+  --bg-page: #050505;
+  --bg-surface: #0d0d0d;
+  --bg-card: #111111;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b8c0cc;
+  --text-muted: #6b7280;
+
+  --color-primary: #c9a34e;
+  --color-primary-hover: #ddb96a;
+
+  --border: rgba(255,255,255,.08);
+
+  --shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+  --radius: 24px;
+
+  --max-width: 1280px;
+
+  /* NAVBAR */
+
+  --navbar-height: 80px;
+
+  /* CONTAINERS */
+
+  --container-padding: 24px;
+
+  /* BORDER RADIUS */
+
+  --radius-pill: 999px;
+
+  /* SECTIONS */
+
+  --section-spacing: 30px;
+
+  /* CARD PADDING */
+
+  --card-padding: 32px;
+}
+

@@ -1,0 +1,271 @@
+/* ==========================
+    CONTAINER
+========================== */
+
+.container {
+  inline-size: min(100% - 40px, var(--max-width));
+  margin-inline: auto;
+}
+
+/* ==========================
+    SECTION
+========================== */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  color: var(--color-primary);
+
+  text-transform: uppercase;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+
+  margin-block-end: 1rem;
+}
+
+.section-description {
+  color: var(--text-secondary);
+
+  max-inline-size: 700px;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+    BUTTONS
+========================== */
+
+.btn-primary {
+  border: none;
+
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  color: black;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary {
+  background: transparent;
+
+  border: 1px solid var(--border-strong);
+
+  color: white;
+
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary);
+
+  color: var(--color-primary);
+}
+
+/* ==========================
+    CARDS
+========================== */
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01)
+  );
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  padding: 2rem;
+
+  backdrop-filter: blur(10px);
+
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-gold);
+}
+
+/* ==========================
+    GLASS CARD
+========================== */
+
+.glass-card {
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+
+  border-radius: var(--radius-lg);
+}
+
+/* ==========================
+    BADGE
+========================== */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: .5rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(212,175,55,.12);
+
+  border: 1px solid rgba(212,175,55,.25);
+
+  color: var(--color-primary);
+
+  font-weight: 700;
+
+  font-size: .85rem;
+}
+
+/* ==========================
+    GRID
+========================== */
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ==========================
+    STATS
+========================== */
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+
+  margin: 0;
+
+  color: var(--color-primary);
+}
+
+.stat-card p {
+  color: var(--text-muted);
+}
+
+/* ==========================
+    FORM
+========================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 1rem;
+
+  border-radius: var(--radius-sm);
+
+  border: 1px solid var(--border);
+
+  background: rgba(255,255,255,.03);
+
+  color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(212,175,55,.15);
+}
+
+/* ==========================
+    RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
