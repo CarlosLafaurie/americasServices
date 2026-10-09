@@ -1,41 +1,43 @@
 export default function CoworkingHero() {
   return (
-    <section className="coworking-hero page-hero">
+    <section className="service-hero coworking-hero">
+      <div className="service-hero-overlay" />
 
-      <div className="page-hero-overlay" />
+      <div className="container service-hero-container">
+        <div className="service-hero-content">
+          <span className="service-hero-badge">
+            COWORKING PREMIUM
+          </span>
 
-      <div className="container page-hero-content">
+          <h1 className="service-hero-title">
+            Trabaja cómodamente
+            <br />
+            mientras esperas
+          </h1>
 
-        <span className="hero-badge">
-          COWORKING PREMIUM
-        </span>
+          <p className="service-hero-description">
+            Convierte el tiempo de espera en tiempo
+            productivo con espacios cómodos, internet
+            de alta velocidad y un ambiente profesional.
+          </p>
 
-        <h1 className="hero-title">
-          Trabaja cómodamente
-          <br />
-          mientras esperas
-        </h1>
+          <div className="service-hero-actions">
+            <button
+              type="button"
+              className="btn-primary"
+            >
+              Conocer Espacios
+            </button>
 
-        <p className="hero-description">
-          Convierte el tiempo de espera en tiempo
-          productivo con espacios cómodos, internet
-          de alta velocidad y un ambiente profesional.
-        </p>
-
-        <div className="hero-buttons">
-
-          <button className="btn-primary">
-            Conocer Espacios
-          </button>
-
-          <button className="btn-secondary">
-            Ver Beneficios
-          </button>
-
+            <button
+              type="button"
+              className="btn-secondary"
+            >
+              Ver Beneficios
+            </button>
+          </div>
         </div>
-
       </div>
-
     </section>
   );
 }

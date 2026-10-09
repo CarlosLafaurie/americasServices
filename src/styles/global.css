@@ -523,9 +523,15 @@ ol {
    Carwash / Cafetería
 ========================== */
 
+/* ==========================
+   SERVICE HERO
+   Carwash / Cafetería / Coworking
+========================== */
+
 .service-hero {
   position: relative;
 
+  inline-size: 100%;
   min-block-size: 750px;
 
   display: flex;
@@ -533,7 +539,7 @@ ol {
 
   overflow: hidden;
 
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -547,6 +553,12 @@ ol {
   background-image:
     url("https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg");
 }
+
+.coworking-hero {
+  background-image:
+    url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg");
+}
+
 
 .service-hero-overlay {
   position: absolute;
