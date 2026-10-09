@@ -1,17 +1,27 @@
-import { Link } from "react-router-dom";
+import {
+  Link,
+} from "react-router-dom";
 
 import logo from "../../assets/logo/logoN.png";
 
-import { useAuth } from "@/hooks/useAuth";
+import {
+  useAuth,
+} from "@/hooks/useAuth";
 
 export default function Navbar() {
-  const { user } = useAuth();
+  const {
+    user,
+    isLoading,
+  } = useAuth();
+
+  const firstName =
+    user?.user.name
+      ?.trim()
+      .split(/\s+/)[0];
 
   return (
     <header className="navbar-wrapper">
-
       <nav className="navbar">
-
         <Link
           to="/"
           className="navbar-brand"
@@ -24,17 +34,12 @@ export default function Navbar() {
         </Link>
 
         <div className="navbar-links">
-
           <Link to="/">
             Inicio
           </Link>
 
           <Link to="/carwash">
             Car Wash
-          </Link>
-
-          <Link to="/barberia">
-            Barbería
           </Link>
 
           <Link to="/cafeteria">
@@ -48,29 +53,22 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-actions">
-
-          {user?.role === "admin" && (
-            <Link
-              to="/admin"
-              className="navbar-admin"
-            >
-              Admin
-            </Link>
-          )}
-
           <Link
-            to={user ? "/profile" : "/login"}
+            to={
+              user
+                ? "/profile"
+                : "/login"
+            }
             className="navbar-login"
           >
-            {user
-              ? `Hola, ${user.firstName}`
-              : "Iniciar Sesión"}
+            {isLoading
+              ? "..."
+              : user
+                ? `Hola, ${firstName}`
+                : "Iniciar Sesión"}
           </Link>
-
         </div>
-
       </nav>
-
     </header>
   );
 }

@@ -1,41 +1,43 @@
 export default function CafeteriaHero() {
   return (
-    <section className="cafeteria-hero page-hero">
+    <section className="service-hero cafeteria-hero">
+      <div className="service-hero-overlay" />
 
-      <div className="page-hero-overlay" />
+      <div className="container service-hero-container">
+        <div className="service-hero-content">
+          <span className="service-hero-badge">
+            CAFETERÍA PREMIUM
+          </span>
 
-      <div className="container page-hero-content">
+          <h1 className="service-hero-title">
+            Café, snacks y
+            <br />
+            momentos para disfrutar
+          </h1>
 
-        <span className="hero-badge">
-          CAFETERÍA PREMIUM
-        </span>
+          <p className="service-hero-description">
+            Mientras tu vehículo recibe atención,
+            disfruta café premium, bebidas especiales
+            y un espacio cómodo para relajarte.
+          </p>
 
-        <h1 className="hero-title">
-          Café, snacks y
-          <br />
-          momentos para disfrutar
-        </h1>
+          <div className="service-hero-actions">
+            <button
+              type="button"
+              className="btn-primary"
+            >
+              Ver Menú
+            </button>
 
-        <p className="hero-description">
-          Mientras tu vehículo recibe atención,
-          disfruta café premium, bebidas especiales
-          y un espacio cómodo para relajarte.
-        </p>
-
-        <div className="hero-buttons">
-
-          <button className="btn-primary">
-            Ver Menú
-          </button>
-
-          <button className="btn-secondary">
-            Conocer Más
-          </button>
-
+            <button
+              type="button"
+              className="btn-secondary"
+            >
+              Conocer Más
+            </button>
+          </div>
         </div>
-
       </div>
-
     </section>
   );
 }

@@ -1,60 +1,44 @@
 export default function CarwashHero() {
   return (
-    <section className="carwash-hero page-hero">
+    <section className="service-hero carwash-hero">
+      <div className="service-hero-overlay" />
 
-     <div className="carwash-hero-overlay page-hero-overlay" />
+      <div className="container service-hero-container">
+        <div className="service-hero-content">
+          <span className="service-hero-badge">
+            SERVICIO PREMIUM
+          </span>
 
-      <div className="container">
-      <div className="page-hero-content">
-        <span className="hero-badge">
-          SERVICIO PREMIUM
-        </span>
+          <h1 className="service-hero-title">
+            Cuidado premium
+            <br />
+            para tu vehículo
+          </h1>
 
-      <h1 className="hero-title">
-        Cuidado premium
-        <br />
-        para tu vehículo
-      </h1>
+          <p className="service-hero-description">
+            Lavados premium, detailing, protección cerámica,
+            limpieza profunda y acabados profesionales para
+            mantener tu vehículo siempre impecable.
+          </p>
 
-      <p className="hero-description">
-        Lavados premium, detailing, protección cerámica,
-        limpieza profunda y acabados profesionales para
-        mantener tu vehículo siempre impecable.
-      </p>
+          <div className="service-hero-actions">
+            <button
+              type="button"
+              className="btn-primary"
+            >
+              Reservar Lavado
+            </button>
 
-        <div className="hero-buttons">
-
-          <button className="button">
-            Reservar Lavado
-          </button>
-
-          <button className="btn-secondary">
-            Ver Servicios
-          </button>
-
-        </div>
-
-        <div className="carwash-hero-stats">
-
-          <div>
-            <strong>+5.000</strong>
-            <span>Vehículos atendidos</span>
+            <button
+              type="button"
+              className="btn-secondary"
+            >
+              Ver Servicios
+            </button>
           </div>
-
-          <div>
-            <strong>98%</strong>
-            <span>Satisfacción</span>
-          </div>
-
-          <div>
-            <strong>+50.000</strong>
-            <span>Puntos entregados</span>
-          </div>
-
+    
         </div>
       </div>
-      </div>
-
     </section>
   );
 }

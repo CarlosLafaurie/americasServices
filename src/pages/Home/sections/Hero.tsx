@@ -1,75 +1,74 @@
 import { motion } from "framer-motion";
 
+import heroVideo from "../../../assets/videos/hero-americas.mp4";
+
 export default function Hero() {
   return (
-    <section className="hero-section page-hero">
-      <div className="hero-overlay page-hero-overlay" />
+    <section className="home-hero">
+      <video
+        className="home-hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source
+          src={heroVideo}
+          type="video/mp4"
+        />
+      </video>
 
-      <div className="container">
-        <div className="page-hero-content">
+      <div className="home-hero-overlay" />
 
-          <motion.span
-            className="hero-badge"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              ease: "easeOut"
-            }}
-          >
-            ★ Acumula puntos con cada compra
-          </motion.span>
+      <div className="container home-hero-container">
+        <motion.div
+          className="home-hero-content"
+          initial={{
+            opacity: 0,
+            y: 24,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.15,
+            ease: "easeOut",
+          }}
+        >
+          <span className="home-hero-kicker">
+            AMERICAN SERVICES
+          </span>
 
-          <motion.h1
-            className="hero-title"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.15,
-              ease: "easeOut"
-            }}
-          >
-            Más que un Car Wash.
+          <h1 className="home-hero-title">
+            Más que un
             <br />
-            Una experiencia completa.
-          </motion.h1>
+            Car Wash.
+          </h1>
 
-          <motion.p
-            className="hero-description"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.3,
-              ease: "easeOut"
-            }}
-          >
-            Lava tu vehículo, disfruta de nuestra cafetería,
-            agenda tu corte de barbería y trabaja cómodamente
-            mientras acumulas puntos para canjear beneficios.
-          </motion.p>
+          <p className="home-hero-description">
+            Una experiencia pensada para aprovechar cada momento.
+          </p>
 
-          <motion.div
-            className="hero-buttons"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.45,
-              ease: "easeOut"
-            }}
-          >
-            <button className="btn-primary">
-              Reservar Servicio
+          <div className="home-hero-actions">
+            <button
+              type="button"
+              className="btn-primary"
+            >
+              Reservar servicio
             </button>
 
-            <button className="btn-secondary">
-              Ver Beneficios
+            <button
+              type="button"
+              className="btn-secondary"
+            >
+              Conocer beneficios
             </button>
-          </motion.div>
-
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

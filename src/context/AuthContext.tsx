@@ -1,16 +1,32 @@
-import { createContext } from "react";
-import type { User } from "@/types/User";
+import {
+  createContext,
+} from "react";
+
+import type {
+  CustomerData,
+  RegisterCustomerData,
+} from "@/types/Auth";
 
 export interface AuthContextType {
-  user: User | null;
+  user: CustomerData | null;
+
+  isLoading: boolean;
 
   login: (
-    username: string,
+    email: string,
     password: string
-  ) => boolean;
+  ) => Promise<void>;
 
-  logout: () => void;
+  register: (
+    data: RegisterCustomerData
+  ) => Promise<void>;
+
+  logout: () => Promise<void>;
+
+  refreshUser: () => Promise<void>;
 }
 
 export const AuthContext =
-  createContext<AuthContextType | null>(null);
+  createContext<AuthContextType | null>(
+    null
+  );

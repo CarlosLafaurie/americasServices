@@ -1,5 +1,12 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {
+  useState,
+} from "react";
+
+import {
+  Link,
+  useNavigate,
+} from "react-router-dom";
+
 import logo from "@/assets/logo/logoN.png";
 
 import { useAuth } from "@/hooks/useAuth";
@@ -9,43 +16,62 @@ export default function LoginPage() {
 
   const navigate = useNavigate();
 
-  const [username, setUsername] =
+  const [email, setEmail] =
     useState("");
 
   const [password, setPassword] =
     useState("");
 
-  const handleSubmit = (
-    e: React.FormEvent
-  ) => {
-    e.preventDefault();
+  const [error, setError] =
+    useState<string | null>(null);
 
-    const success =
-      login(username, password);
+  const [isSubmitting, setIsSubmitting] =
+    useState(false);
 
-    if (!success) {
-      alert("Credenciales inválidas");
-      return;
+  const handleSubmit = async (
+    event: React.FormEvent
+  ): Promise<void> => {
+    event.preventDefault();
+
+    setError(null);
+    setIsSubmitting(true);
+
+    try {
+      await login(
+        email.trim(),
+        password
+      );
+
+      navigate(
+        "/profile",
+        {
+          replace: true,
+        }
+      );
+    } catch (exception) {
+      setError(
+        exception instanceof Error
+          ? exception.message
+          : "No fue posible iniciar sesión."
+      );
+    } finally {
+      setIsSubmitting(false);
     }
-
-    navigate("/");
   };
 
   return (
     <section className="login-page">
-
       <div className="login-overlay" />
 
       <div className="login-card">
-
-         <Link
+        <Link
           to="/"
           className="auth-back-button"
         >
           ← Inicio
         </Link>
 
-       <Link
+        <Link
           to="/"
           className="login-logo-link"
         >
@@ -69,32 +95,52 @@ export default function LoginPage() {
           onSubmit={handleSubmit}
           className="login-form"
         >
-
           <input
-            type="text"
-            placeholder="Usuario"
-            value={username}
-            onChange={(e) =>
-              setUsername(e.target.value)
+            type="email"
+            placeholder="Correo electrónico"
+            value={email}
+            autoComplete="email"
+            disabled={isSubmitting}
+            onChange={(event) =>
+              setEmail(
+                event.target.value
+              )
             }
+            required
           />
 
           <input
             type="password"
             placeholder="Contraseña"
             value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
+            autoComplete="current-password"
+            disabled={isSubmitting}
+            onChange={(event) =>
+              setPassword(
+                event.target.value
+              )
             }
+            required
           />
+
+          {error && (
+            <div
+              role="alert"
+              className="login-error"
+            >
+              {error}
+            </div>
+          )}
 
           <button
             type="submit"
             className="btn-primary"
+            disabled={isSubmitting}
           >
-            Ingresar
+            {isSubmitting
+              ? "Ingresando..."
+              : "Ingresar"}
           </button>
-
         </form>
 
         <div className="login-divider">
@@ -107,19 +153,7 @@ export default function LoginPage() {
         >
           Crear cuenta
         </Link>
-
-        <div className="login-demo">
-
-          <strong>Demo:</strong>
-
-          <span>
-            cliente / 123456
-          </span>
-
-        </div>
-
       </div>
-
     </section>
   );
 }

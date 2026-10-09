@@ -1,9 +1,32 @@
-import { useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 
-import { AuthContext } from "./AuthContext";
+import {
+  loginCustomer,
+  logoutCustomer,
+  registerCustomer,
+} from "@/api/auth";
 
-import { users } from "@/data/users";
-import type { User } from "@/types/User";
+import {
+  getAuthToken,
+  removeAuthToken,
+} from "@/api/client";
+
+import {
+  getCurrentCustomer,
+} from "@/api/customer";
+
+import {
+  AuthContext,
+} from "./AuthContext";
+
+import type {
+  CustomerData,
+  RegisterCustomerData,
+} from "@/types/Auth";
 
 interface AuthProviderProps {
   children: React.ReactNode;
@@ -12,50 +35,105 @@ interface AuthProviderProps {
 export default function AuthProvider({
   children,
 }: AuthProviderProps) {
-  const [user, setUser] = useState<User | null>(() => {
-    const stored = localStorage.getItem("user");
-
-    return stored
-      ? JSON.parse(stored)
-      : null;
-  });
-
-  const login = (
-    username: string,
-    password: string
-  ): boolean => {
-    const found = users.find(
-      (u) =>
-        u.username === username &&
-        u.password === password
+  const [
+    user,
+    setUser,
+  ] =
+    useState<CustomerData | null>(
+      null
     );
 
-    if (!found) {
-      return false;
-    }
+  const [
+    isLoading,
+    setIsLoading,
+  ] =
+    useState(true);
 
-    setUser(found);
+  const refreshUser =
+    useCallback(
+      async (): Promise<void> => {
+        const token =
+          getAuthToken();
 
-    localStorage.setItem(
-      "user",
-      JSON.stringify(found)
+        if (!token) {
+          setUser(null);
+
+          return;
+        }
+
+        try {
+          const response =
+            await getCurrentCustomer();
+
+          setUser(
+            response.data
+          );
+        } catch {
+          removeAuthToken();
+
+          setUser(null);
+        }
+      },
+      []
     );
 
-    return true;
-  };
+  useEffect(() => {
+    const restoreSession =
+      async (): Promise<void> => {
+        try {
+          await refreshUser();
+        } finally {
+          setIsLoading(
+            false
+          );
+        }
+      };
 
-  const logout = () => {
-    setUser(null);
+    void restoreSession();
+  }, [refreshUser]);
 
-    localStorage.removeItem("user");
-  };
+  const login =
+    async (
+      email: string,
+      password: string
+    ): Promise<void> => {
+      await loginCustomer(
+        email,
+        password
+      );
+
+      await refreshUser();
+    };
+
+  const register =
+    async (
+      data: RegisterCustomerData
+    ): Promise<void> => {
+      await registerCustomer(
+        data
+      );
+
+      await refreshUser();
+    };
+
+  const logout =
+    async (): Promise<void> => {
+      try {
+        await logoutCustomer();
+      } finally {
+        setUser(null);
+      }
+    };
 
   return (
     <AuthContext.Provider
       value={{
         user,
+        isLoading,
         login,
+        register,
         logout,
+        refreshUser,
       }}
     >
       {children}
