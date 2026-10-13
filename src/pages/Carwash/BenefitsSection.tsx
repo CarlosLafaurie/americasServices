@@ -1,23 +1,17 @@
 export default function BenefitsSection() {
   return (
-    <section className="section">
-
+    <section className="section carwash-benefits-section">
       <div className="container">
-
-        <div className="membership-premium">
-
-          <div className="membership-image">
-
+        <div className="carwash-benefits">
+          <div className="carwash-benefits-image">
             <img
               src="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg"
               alt="Car Wash Premium"
             />
-
           </div>
 
-          <div className="membership-info">
-
-            <span className="membership-badge">
+          <div className="carwash-benefits-info">
+            <span className="carwash-benefits-badge">
               BENEFICIOS
             </span>
 
@@ -26,29 +20,45 @@ export default function BenefitsSection() {
             </h2>
 
             <p>
-              Mientras atendemos tu vehículo
-              puedes disfrutar de nuestra cafetería,
-              coworking o acumular puntos para
+              Mientras atendemos tu vehículo puedes disfrutar de
+              nuestra cafetería, coworking o acumular puntos para
               futuras recompensas.
             </p>
 
-            <div className="membership-grid">
+            <div className="carwash-benefits-grid">
+              <div>
+                <span>✓</span>
+                Puntos por cada servicio
+              </div>
 
-              <div>✓ Puntos por cada servicio</div>
-              <div>✓ Atención rápida</div>
-              <div>✓ Zona de espera</div>
-              <div>✓ Café disponible</div>
-              <div>✓ Wifi de alta velocidad</div>
-              <div>✓ Historial digital</div>
+              <div>
+                <span>✓</span>
+                Atención rápida
+              </div>
 
+              <div>
+                <span>✓</span>
+                Zona de espera
+              </div>
+
+              <div>
+                <span>✓</span>
+                Café disponible
+              </div>
+
+              <div>
+                <span>✓</span>
+                Wifi de alta velocidad
+              </div>
+
+              <div>
+                <span>✓</span>
+                Historial digital
+              </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

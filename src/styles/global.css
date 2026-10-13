@@ -1558,66 +1558,786 @@ ol {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================
+   MEMBERSHIP PREMIUM
+========================== */
 
 .membership-premium {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
 
   overflow: hidden;
 
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
   border-radius: 32px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
 
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.02)
-  );
+  box-shadow:
+    0 30px 80px
+    rgba(0, 0, 0, 0.28);
 }
 
+
+/* ==========================
+   IMAGE
+========================== */
+
 .membership-image {
+  position: relative;
+
   min-block-size: 520px;
+
+  overflow: hidden;
+
+  background: #0c0c0c;
+}
+
+.membership-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 65%,
+      rgba(5, 5, 5, 0.35) 100%
+    );
 }
 
 .membership-image img {
   inline-size: 100%;
   block-size: 100%;
+
   object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.6s ease;
 }
 
+.membership-premium:hover .membership-image img {
+  transform: scale(1.025);
+}
+
+
+/* ==========================
+   CONTENT
+========================== */
+
 .membership-info {
-  padding: 4rem;
+  position: relative;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
+  padding:
+    clamp(
+      2.5rem,
+      5vw,
+      4rem
+    );
 }
 
 .membership-info h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  margin-block-end: 1rem;
+  max-inline-size: 520px;
+
+  margin:
+    0
+    0
+    1rem;
+
+  font-size:
+    clamp(
+      2.3rem,
+      4vw,
+      3.5rem
+    );
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
 }
 
-.membership-info p {
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-block-end: 2rem;
+.membership-info > p {
+  max-inline-size: 540px;
+
+  margin:
+    0
+    0
+    2rem;
+
+  color:
+    var(--text-secondary);
+
+  line-height: 1.75;
 }
+
+
+/* ==========================
+   BADGE
+========================== */
+
+.membership-badge {
+  align-self: flex-start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-block-end: 1.25rem;
+
+  padding:
+    0.55rem
+    0.85rem;
+
+  border:
+    1px solid
+    rgba(212, 175, 55, 0.2);
+
+  border-radius:
+    var(--radius-pill);
+
+  background:
+    rgba(212, 175, 55, 0.08);
+
+  color:
+    var(--color-primary);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+/* ==========================
+   BENEFITS
+========================== */
 
 .membership-premium .membership-grid {
-  margin-block-end: 2rem;
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 0.7rem;
+
+  margin:
+    0
+    0
+    2rem;
 }
 
+.membership-premium .membership-grid > div {
+  min-inline-size: 0;
+
+  padding:
+    0.85rem
+    1rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 0.82rem;
+
+  line-height: 1.4;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
 @media (max-width: 900px) {
+
   .membership-premium {
     grid-template-columns: 1fr;
   }
 
   .membership-image {
-    min-block-size: 300px;
+    min-block-size: 0;
+
+    aspect-ratio: 16 / 8;
+  }
+
+  .membership-image::after {
+    background:
+      linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(5, 5, 5, 0.38) 100%
+      );
+  }
+
+  .membership-image img {
+    object-position:
+      center
+      45%;
+  }
+
+  .membership-info {
+    padding:
+      2.5rem;
   }
 }
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 640px) {
+
+  .membership-premium {
+    border-radius: 24px;
+
+    box-shadow:
+      0 20px 50px
+      rgba(0, 0, 0, 0.22);
+  }
+
+  .membership-image {
+    min-block-size: 0;
+
+    aspect-ratio: 4 / 3;
+  }
+
+  .membership-image img {
+    object-position:
+      center
+      center;
+  }
+
+  .membership-info {
+    padding:
+      1.5rem;
+  }
+
+  .membership-badge {
+    margin-block-end:
+      1rem;
+
+    padding:
+      0.48rem
+      0.7rem;
+
+    font-size:
+      0.62rem;
+
+    letter-spacing:
+      0.08em;
+  }
+
+  .membership-info h2 {
+    max-inline-size: 100%;
+
+    margin-block-end:
+      0.85rem;
+
+    font-size:
+      clamp(
+        2rem,
+        9vw,
+        2.7rem
+      );
+
+    line-height:
+      1.02;
+  }
+
+  .membership-info > p {
+    margin-block-end:
+      1.5rem;
+
+    font-size:
+      0.88rem;
+
+    line-height:
+      1.65;
+  }
+
+  .membership-premium .membership-grid {
+    grid-template-columns: 1fr;
+
+    gap:
+      0.5rem;
+
+    margin-block-end:
+      1.5rem;
+  }
+
+  .membership-premium .membership-grid > div {
+    padding:
+      0.75rem
+      0.85rem;
+
+    border-radius:
+      12px;
+
+    font-size:
+      0.78rem;
+  }
+
+  .membership-info .button {
+    inline-size: 100%;
+
+    min-block-size: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+      0.85rem
+      1rem;
+  }
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 420px) {
+
+  .membership-premium {
+    border-radius: 20px;
+  }
+
+  .membership-image {
+    aspect-ratio: 1 / 0.82;
+  }
+
+  .membership-info {
+    padding:
+      1.25rem;
+  }
+
+  .membership-info h2 {
+    font-size:
+      clamp(
+        1.8rem,
+        9vw,
+        2.35rem
+      );
+  }
+
+  .membership-info > p {
+    font-size:
+      0.82rem;
+  }
+}
+
+/* ==========================
+   CARWASH BENEFITS
+========================== */
+
+.carwash-benefits {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  box-shadow:
+    0 30px 80px
+    rgba(0, 0, 0, 0.28);
+}
+
+
+/* ==========================
+   IMAGE
+========================== */
+
+.carwash-benefits-image {
+  position: relative;
+
+  min-block-size: 520px;
+
+  overflow: hidden;
+
+  background: #0b0b0b;
+}
+
+.carwash-benefits-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 60%,
+      rgba(5, 5, 5, 0.32) 100%
+    );
+}
+
+.carwash-benefits-image img {
+  inline-size: 100%;
+  block-size: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.carwash-benefits:hover
+.carwash-benefits-image img {
+  transform: scale(1.025);
+}
+
+
+/* ==========================
+   CONTENT
+========================== */
+
+.carwash-benefits-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    clamp(
+      2.5rem,
+      5vw,
+      4rem
+    );
+}
+
+.carwash-benefits-badge {
+  align-self: flex-start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-block-end: 1.25rem;
+
+  padding:
+    0.55rem
+    0.85rem;
+
+  border:
+    1px solid
+    rgba(212, 175, 55, 0.2);
+
+  border-radius:
+    var(--radius-pill);
+
+  background:
+    rgba(212, 175, 55, 0.08);
+
+  color:
+    var(--color-primary);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.carwash-benefits-info h2 {
+  max-inline-size: 520px;
+
+  margin:
+    0
+    0
+    1rem;
+
+  font-size:
+    clamp(
+      2.3rem,
+      4vw,
+      3.5rem
+    );
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.carwash-benefits-info > p {
+  max-inline-size: 540px;
+
+  margin:
+    0
+    0
+    2rem;
+
+  color:
+    var(--text-secondary);
+
+  line-height: 1.75;
+}
+
+
+/* ==========================
+   BENEFITS GRID
+========================== */
+
+.carwash-benefits-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 0.7rem;
+}
+
+.carwash-benefits-grid > div {
+  min-inline-size: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.65rem;
+
+  padding:
+    0.9rem
+    1rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 0.82rem;
+
+  line-height: 1.4;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.carwash-benefits-grid > div:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(212, 175, 55, 0.16);
+
+  background:
+    rgba(212, 175, 55, 0.04);
+}
+
+.carwash-benefits-grid > div > span {
+  flex-shrink: 0;
+
+  color:
+    var(--color-primary);
+
+  font-weight: 800;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 900px) {
+
+  .carwash-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .carwash-benefits-image {
+    min-block-size: 0;
+
+    aspect-ratio: 16 / 8;
+  }
+
+  .carwash-benefits-image::after {
+    background:
+      linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(5, 5, 5, 0.35) 100%
+      );
+  }
+
+  .carwash-benefits-info {
+    padding: 2.5rem;
+  }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 640px) {
+
+  .carwash-benefits {
+    border-radius: 24px;
+
+    box-shadow:
+      0 20px 50px
+      rgba(0, 0, 0, 0.22);
+  }
+
+  .carwash-benefits-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .carwash-benefits-image img {
+    object-position: center;
+  }
+
+  .carwash-benefits-info {
+    padding: 1.5rem;
+  }
+
+  .carwash-benefits-badge {
+    margin-block-end: 1rem;
+
+    padding:
+      0.48rem
+      0.7rem;
+
+    font-size: 0.62rem;
+  }
+
+  .carwash-benefits-info h2 {
+    max-inline-size: 100%;
+
+    margin-block-end: 0.85rem;
+
+    font-size:
+      clamp(
+        2rem,
+        9vw,
+        2.7rem
+      );
+
+    line-height: 1.02;
+  }
+
+  .carwash-benefits-info > p {
+    margin-block-end: 1.5rem;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+  }
+
+  .carwash-benefits-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0.5rem;
+  }
+
+  .carwash-benefits-grid > div {
+    padding:
+      0.75rem
+      0.85rem;
+
+    border-radius: 12px;
+
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 420px) {
+
+  .carwash-benefits {
+    border-radius: 20px;
+  }
+
+  .carwash-benefits-image {
+    aspect-ratio: 1 / 0.82;
+  }
+
+  .carwash-benefits-info {
+    padding: 1.25rem;
+  }
+
+  .carwash-benefits-info h2 {
+    font-size:
+      clamp(
+        1.8rem,
+        9vw,
+        2.35rem
+      );
+  }
+
+  .carwash-benefits-info > p {
+    font-size: 0.82rem;
+  }
+}
+
 .footer {
   margin-block-start: 100px;
 
