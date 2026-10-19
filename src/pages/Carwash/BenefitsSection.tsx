@@ -1,3 +1,5 @@
+import car3 from "../../assets/images/car4.jpeg";
+
 export default function BenefitsSection() {
   return (
     <section className="section carwash-benefits-section">
@@ -5,7 +7,7 @@ export default function BenefitsSection() {
         <div className="carwash-benefits">
           <div className="carwash-benefits-image">
             <img
-              src="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg"
+              src={car3}
               alt="Car Wash Premium"
             />
           </div>

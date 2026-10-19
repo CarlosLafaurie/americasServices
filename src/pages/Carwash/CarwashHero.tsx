@@ -1,6 +1,13 @@
+import carwashHeroImage from "../../assets/images/car2.jpeg";
+
 export default function CarwashHero() {
   return (
-    <section className="service-hero carwash-hero">
+    <section
+      className="service-hero carwash-hero"
+      style={{
+        backgroundImage: `url(${carwashHeroImage})`,
+      }}
+    >
       <div className="service-hero-overlay" />
 
       <div className="container service-hero-container">
@@ -36,7 +43,6 @@ export default function CarwashHero() {
               Ver Servicios
             </button>
           </div>
-    
         </div>
       </div>
     </section>
