@@ -1,3 +1,4 @@
+import FadeIn from "../../components/common/FadeIn";
 const services = [
   {
     name: "Lavado Básico",
@@ -38,10 +39,10 @@ export default function ServicesSection() {
 
         <div className="grid grid-2">
 
-          {services.map((service) => (
+          {services.map((service, index) => (
+            <FadeIn key={service.name} className="fade-in-grid-item" delay={index * 0.08}>
 
             <div
-              key={service.name}
               className="card carwash-service-card"
             >
 
@@ -56,6 +57,7 @@ export default function ServicesSection() {
               </div>
 
             </div>
+            </FadeIn>
 
           ))}
 

@@ -2,6 +2,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { motion } from "framer-motion";
 
 import type {
   CSSProperties,
@@ -442,7 +443,12 @@ export default function ProfilePage() {
   return (
     <section className="profile-page">
       <div className="container">
-        <section className="profile-hero">
+        <motion.section
+          className="profile-hero"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="profile-hero-shade" />
 
           <div className="profile-hero-content">
@@ -509,7 +515,7 @@ export default function ProfilePage() {
               Cerrar sesión
             </span>
           </button>
-        </section>
+        </motion.section>
 
         <section className="profile-stats">
           <div className="profile-stat-card">
@@ -705,7 +711,13 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        <section className="profile-dashboard-grid">
+        <motion.section
+          className="profile-dashboard-grid"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.12 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+        >
           <article className="profile-panel profile-personal-panel">
             <div className="profile-panel-header">
               <div className="profile-panel-title">
@@ -1228,9 +1240,15 @@ export default function ProfilePage() {
               </div>
             )}
           </article>
-        </section>
+        </motion.section>
 
-        <section className="profile-history">
+        <motion.section
+          className="profile-history"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.12 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="profile-history-heading">
             <div>
               <span className="profile-eyebrow">
@@ -1295,7 +1313,7 @@ export default function ProfilePage() {
               )}
             </div>
           )}
-        </section>
+        </motion.section>
       </div>
     </section>
   );

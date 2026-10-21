@@ -1,10 +1,12 @@
+import FadeIn from "../../components/common/FadeIn";
+
 export default function CafeteriaRewardsSection() {
   return (
     <section className="section">
 
       <div className="container">
 
-        <div className="membership-card">
+        <FadeIn className="membership-card">
 
           <span className="membership-badge">
             PUNTOS Y BENEFICIOS
@@ -34,7 +36,7 @@ export default function CafeteriaRewardsSection() {
 
           </div>
 
-        </div>
+        </FadeIn>
 
       </div>
 

@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
 
 import AppRoutes from "./routes/AppRoutes";
 import Navbar from "./components/layout/Navbar";
@@ -16,21 +17,23 @@ function App() {
     authPages.includes(pathname);
 
   return (
-    <div
-      className={
-        hideLayout
-          ? "app-layout auth-layout"
-          : "app-layout"
-      }
-    >
-      {!hideLayout && <Navbar />}
+    <MotionConfig reducedMotion="user">
+      <div
+        className={
+          hideLayout
+            ? "app-layout auth-layout"
+            : "app-layout"
+        }
+      >
+        {!hideLayout && <Navbar />}
 
-      <main>
-        <AppRoutes />
-      </main>
+        <main>
+          <AppRoutes />
+        </main>
 
-      {!hideLayout && <Footer />}
-    </div>
+        {!hideLayout && <Footer />}
+      </div>
+    </MotionConfig>
   );
 }
 

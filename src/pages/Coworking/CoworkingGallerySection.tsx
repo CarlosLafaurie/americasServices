@@ -1,3 +1,4 @@
+import FadeIn from "../../components/common/FadeIn";
 const gallery = [
   "https://images.pexels.com/photos/18678225/pexels-photo-18678225.jpeg",
   "https://images.pexels.com/photos/23496667/pexels-photo-23496667.jpeg",
@@ -17,10 +18,10 @@ export default function CoworkingGallerySection() {
 
         <div className="grid grid-2">
 
-          {gallery.map((image) => (
+          {gallery.map((image, index) => (
+            <FadeIn key={image} className="fade-in-grid-item" delay={index * 0.08}>
 
             <div
-              key={image}
               className="service-card-image"
             >
 
@@ -31,6 +32,7 @@ export default function CoworkingGallerySection() {
               />
 
             </div>
+            </FadeIn>
 
           ))}
 

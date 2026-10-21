@@ -1,3 +1,4 @@
+import FadeIn from "../../../components/common/FadeIn";
 const testimonials = [
 {
 name: "Carlos M.",
@@ -30,27 +31,34 @@ export default function Testimonials() {
 
         <div className="stats-grid">
 
+        <FadeIn className="fade-in-grid-item">
         <div className="stats-card">
             <h3>5.000+</h3>
             <span>Clientes satisfechos</span>
         </div>
+        </FadeIn>
 
+        <FadeIn className="fade-in-grid-item" delay={0.08}>
         <div className="stats-card">
             <h3>25.000+</h3>
             <span>Servicios realizados</span>
         </div>
+        </FadeIn>
 
+        <FadeIn className="fade-in-grid-item" delay={0.16}>
         <div className="stats-card">
             <h3>4.9/5</h3>
             <span>Calificación promedio</span>
         </div>
+        </FadeIn>
 
         </div>
 
         <div className="grid grid-3">
 
-        {testimonials.map((item) => (
-            <div key={item.name} className="testimonial-card">
+        {testimonials.map((item, index) => (
+            <FadeIn key={item.name} className="fade-in-grid-item" delay={index * 0.1}>
+            <div className="testimonial-card">
 
             <div className="testimonial-header">
 
@@ -76,6 +84,7 @@ export default function Testimonials() {
             </p>
 
             </div>
+            </FadeIn>
         ))}
 
         </div>

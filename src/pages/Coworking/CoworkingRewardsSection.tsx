@@ -1,10 +1,12 @@
+import FadeIn from "../../components/common/FadeIn";
+
 export default function CoworkingRewardsSection() {
   return (
     <section className="section">
 
       <div className="container">
 
-        <div className="membership-card">
+        <FadeIn className="membership-card">
 
           <span className="membership-badge">
             EXPERIENCIA PREMIUM
@@ -34,7 +36,7 @@ export default function CoworkingRewardsSection() {
 
           </div>
 
-        </div>
+        </FadeIn>
 
       </div>
 

@@ -1,3 +1,4 @@
+import FadeIn from "../../components/common/FadeIn";
 const spaces = [
   {
     title: "Zona de Trabajo",
@@ -41,10 +42,10 @@ export default function CoworkingSpacesSection() {
 
         <div className="grid grid-2">
 
-          {spaces.map((space) => (
+          {spaces.map((space, index) => (
+            <FadeIn key={space.title} className="fade-in-grid-item" delay={index * 0.08}>
 
             <div
-              key={space.title}
               className="service-card-image"
             >
 
@@ -65,6 +66,7 @@ export default function CoworkingSpacesSection() {
               </div>
 
             </div>
+            </FadeIn>
 
           ))}
 

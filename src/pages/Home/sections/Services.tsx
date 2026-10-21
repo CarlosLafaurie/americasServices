@@ -1,25 +1,27 @@
+import FadeIn from "../../../components/common/FadeIn";
 import { Link } from "react-router-dom";
+import carwashImage from "../../../assets/images/car3.jpeg";
+import cafeteriaImage from "../../../assets/images/car2.jpeg";
+import coworkingImage from "../../../assets/images/car4.jpeg";
 
 const services = [
   {
     title: "Car Wash",
     path: "/carwash",
     image:
-      "https://images.pexels.com/photos/6872599/pexels-photo-6872599.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      carwashImage,
     desc: "Lavados premium, detailing y mantenimiento estético.",
   },
   {
     title: "Cafetería",
     path: "/cafeteria",
-    image:
-      "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: cafeteriaImage,
     desc: "Café premium, snacks y bebidas especiales.",
   },
   {
     title: "Coworking",
     path: "/coworking",
-    image:
-      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: coworkingImage,
     desc: "Espacios cómodos para trabajar mientras esperas.",
   },
 ];
@@ -28,7 +30,7 @@ export default function Services() {
   return (
     <section className="section home-services-section">
       <div className="container">
-        <div className="home-services-heading">
+        <FadeIn className="home-services-heading">
           <span className="section-subtitle">
             Todo en un solo lugar
           </span>
@@ -43,13 +45,17 @@ export default function Services() {
             Cuida tu vehículo, disfruta nuestra cafetería
             y aprovecha espacios cómodos mientras esperas.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="home-services-grid">
-          {services.map((service) => (
+          {services.map((service, index) => (
+            <FadeIn
+              key={service.title}
+              className="fade-in-grid-item home-service-card-wrapper"
+              delay={index * 0.1}
+            >
             <Link
               to={service.path}
-              key={service.title}
               className="service-card-image home-service-card"
             >
               <img
@@ -80,6 +86,7 @@ export default function Services() {
                 </span>
               </div>
             </Link>
+            </FadeIn>
           ))}
         </div>
       </div>

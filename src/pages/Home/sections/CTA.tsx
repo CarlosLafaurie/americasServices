@@ -1,8 +1,10 @@
+import FadeIn from "../../../components/common/FadeIn";
+
 export default function CTA() {
   return (
     <section className="cta-section">
 
-      <div className="container">
+      <FadeIn className="container">
 
         <h2>
           Empieza a ganar beneficios hoy.
@@ -17,7 +19,7 @@ export default function CTA() {
           Reservar Ahora
         </button>
 
-      </div>
+      </FadeIn>
 
     </section>
   );

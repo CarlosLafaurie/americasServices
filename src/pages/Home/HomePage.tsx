@@ -10,8 +10,8 @@ export default function HomePage() {
     <>
       <Hero />
       <Services />
-      <PointsProgram />
       <Membership />
+      <PointsProgram />
       <Testimonials />
       <CTA />
     </>

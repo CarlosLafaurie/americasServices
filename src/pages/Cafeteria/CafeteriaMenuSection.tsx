@@ -1,3 +1,4 @@
+import FadeIn from "../../components/common/FadeIn";
 const products = [
   {
     title: "Café Americano",
@@ -41,10 +42,10 @@ export default function CafeteriaMenuSection() {
 
         <div className="grid grid-2">
 
-          {products.map((item) => (
+          {products.map((item, index) => (
+            <FadeIn key={item.title} className="fade-in-grid-item" delay={index * 0.08}>
 
             <div
-              key={item.title}
               className="service-card-image"
             >
 
@@ -65,6 +66,7 @@ export default function CafeteriaMenuSection() {
               </div>
 
             </div>
+            </FadeIn>
 
           ))}
 

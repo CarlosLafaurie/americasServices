@@ -1,16 +1,18 @@
+import FadeIn from "../../../components/common/FadeIn";
+
 export default function Membership() {
   return (
     <section className="section">
       <div className="container">
-        <div className="membership-premium">
-          <div className="membership-image">
+          <div className="membership-premium">
+          <FadeIn className="membership-image" direction="right">
             <img
               src="https://images.pexels.com/photos/7821700/pexels-photo-7821700.jpeg"
               alt="Membership Premium"
             />
-          </div>
+          </FadeIn>
 
-          <div className="membership-info">
+          <FadeIn className="membership-info" direction="left" delay={0.08}>
             <span className="membership-badge">
               MEMBERSHIP PREMIUM
             </span>
@@ -26,12 +28,12 @@ export default function Membership() {
             </p>
 
             <div className="membership-grid">
-              <div>✓ Lavados ilimitados</div>
-              <div>✓ Puntos dobles</div>
-              <div>✓ Descuentos en servicios</div>
-              <div>✓ Café mensual gratis</div>
-              <div>✓ Coworking preferencial</div>
-              <div>✓ Atención prioritaria</div>
+              <FadeIn className="fade-in-grid-item">✓ Lavados ilimitados</FadeIn>
+              <FadeIn className="fade-in-grid-item" delay={0.06}>✓ Puntos dobles</FadeIn>
+              <FadeIn className="fade-in-grid-item" delay={0.12}>✓ Descuentos en servicios</FadeIn>
+              <FadeIn className="fade-in-grid-item" delay={0.18}>✓ Café mensual gratis</FadeIn>
+              <FadeIn className="fade-in-grid-item" delay={0.24}>✓ Coworking preferencial</FadeIn>
+              <FadeIn className="fade-in-grid-item" delay={0.3}>✓ Atención prioritaria</FadeIn>
             </div>
 
             <button
@@ -40,7 +42,7 @@ export default function Membership() {
             >
               Adquirir Membresía
             </button>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

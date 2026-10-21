@@ -1,3 +1,4 @@
+import FadeIn from "../../components/common/FadeIn";
 export default function CoworkingAboutSection() {
   return (
     <section className="section">
@@ -15,32 +16,32 @@ export default function CoworkingAboutSection() {
 
         <div className="trust-features">
 
-          <div className="card">
+          <FadeIn className="fade-in-grid-item"><div className="card">
             <h3>Internet Rápido</h3>
 
             <p>
               Conexión estable para reuniones,
               trabajo remoto y videollamadas.
             </p>
-          </div>
+          </div></FadeIn>
 
-          <div className="card">
+          <FadeIn className="fade-in-grid-item" delay={0.08}><div className="card">
             <h3>Espacios Cómodos</h3>
 
             <p>
               Mesas, sillas ergonómicas y un
               ambiente diseñado para trabajar.
             </p>
-          </div>
+          </div></FadeIn>
 
-          <div className="card">
+          <FadeIn className="fade-in-grid-item" delay={0.16}><div className="card">
             <h3>Café y Snacks</h3>
 
             <p>
               Complementa tu jornada con acceso
               a nuestra cafetería premium.
             </p>
-          </div>
+          </div></FadeIn>
 
         </div>
 
