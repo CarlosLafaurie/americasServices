@@ -53,21 +53,6 @@ export default function Hero() {
             Una experiencia pensada para aprovechar cada momento.
           </p>
 
-          <div className="home-hero-actions">
-            <button
-              type="button"
-              className="btn-primary"
-            >
-              Reservar servicio
-            </button>
-
-            <button
-              type="button"
-              className="btn-secondary"
-            >
-              Conocer beneficios
-            </button>
-          </div>
         </motion.div>
       </div>
     </section>

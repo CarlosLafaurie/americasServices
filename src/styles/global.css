@@ -342,7 +342,7 @@ ol {
   .home-hero {
     min-block-size: 0;
 
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
 
     display: block;
 
@@ -353,7 +353,7 @@ ol {
     inline-size: 100%;
     block-size: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 
     background: #000;
@@ -373,60 +373,48 @@ ol {
   .home-hero-content {
     inline-size: auto;
 
-    max-inline-size: 48%;
+    max-inline-size: 60%;
 
-    margin:
-      0
-      0
-      0.7rem;
+    margin: 0 0 1rem;
 
-    padding:
-      0.5rem
-      0.65rem;
+    padding: 0.8rem 1rem;
   }
 
   .home-hero-title {
-    max-inline-size: 220px;
+    max-inline-size: 280px;
 
-    margin-block-end: 0.25rem;
+    margin-block-end: 0.4rem;
 
-    font-size:
-      clamp(
-        1.2rem,
-        4vw,
-        2rem
-      );
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
 
-    line-height: 0.96;
+    line-height: 0.95;
   }
 
   .home-hero-description {
-    max-inline-size: 220px;
+    max-inline-size: 260px;
 
-    margin-block-end: 0.45rem;
+    margin-block-end: 0.7rem;
 
-    font-size: 0.55rem;
+    font-size: 0.75rem;
 
-    line-height: 1.35;
+    line-height: 1.4;
   }
 
   .home-hero-kicker {
-    margin-block-end: 0.2rem;
+    margin-block-end: 0.3rem;
 
-    font-size: 0.45rem;
+    font-size: 0.55rem;
   }
 
   .home-hero-actions {
-    gap: 0.3rem;
+    gap: 0.4rem;
   }
 
   .home-hero-actions .btn-primary,
   .home-hero-actions .btn-secondary {
-    padding:
-      0.32rem
-      0.48rem;
+    padding: 0.5rem 0.7rem;
 
-    font-size: 0.42rem;
+    font-size: 0.55rem;
   }
 }
 
@@ -441,9 +429,13 @@ ol {
 
     min-block-size: 0;
 
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 9 / 16;
 
     background: #000;
+
+    position: relative;
+
+    overflow: hidden;
   }
 
   .home-hero-video {
@@ -454,74 +446,71 @@ ol {
     inline-size: 100%;
     block-size: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
+
     object-position: center;
 
     background: #000;
   }
 
+  .home-hero-container {
+    position: absolute;
+
+    inset: 0;
+
+    block-size: 100%;
+
+    display: flex;
+    align-items: flex-end;
+  }
+
   .home-hero-content {
-    max-inline-size: 42%;
+    max-inline-size: 88%;
 
-    margin:
-      0
-      0
-      0.35rem;
+    margin: 0 0 2rem;
 
-    padding:
-      0.25rem
-      0.3rem;
+    padding: 0 1.1rem;
   }
 
   .home-hero-kicker {
-    margin-block-end: 0.1rem;
+    margin-block-end: 0.4rem;
 
-    font-size: 0.32rem;
+    font-size: 0.55rem;
   }
 
   .home-hero-title {
-    max-inline-size: 150px;
+    max-inline-size: 320px;
 
-    margin-block-end: 0.12rem;
+    margin-block-end: 0.5rem;
 
-    font-size:
-      clamp(
-        0.7rem,
-        3.7vw,
-        1rem
-      );
+    font-size: clamp(2rem, 9vw, 3rem);
 
-    line-height: 0.98;
+    line-height: 0.92;
   }
 
   .home-hero-description {
-    max-inline-size: 150px;
+    max-inline-size: 300px;
 
-    margin-block-end: 0.25rem;
+    margin-block-end: 1rem;
 
-    font-size: 0.3rem;
+    font-size: 0.78rem;
 
-    line-height: 1.25;
+    line-height: 1.45;
   }
 
   .home-hero-actions {
-    gap: 0.18rem;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
   }
 
   .home-hero-actions .btn-primary,
   .home-hero-actions .btn-secondary {
-    padding:
-      0.2rem
-      0.28rem;
+    padding: 0.65rem 0.85rem;
 
-    font-size: 0.28rem;
+    font-size: 0.7rem;
   }
 }
-
-/* ==========================
-   SERVICE HERO
-   Carwash / Cafetería
-========================== */
 
 /* ==========================
    SERVICE HERO

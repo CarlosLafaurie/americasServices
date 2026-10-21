@@ -65,7 +65,7 @@ export default function Navbar() {
               ? "..."
               : user
                 ? `Hola, ${firstName}`
-                : "Iniciar Sesión"}
+                : "Ingresar"}
           </Link>
         </div>
       </nav>
