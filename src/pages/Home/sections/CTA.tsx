@@ -4,7 +4,7 @@ export default function CTA() {
   return (
     <section className="cta-section">
 
-      <FadeIn className="container">
+      <FadeIn className="container cta-section-content">
 
         <h2>
           Empieza a ganar beneficios hoy.

@@ -8,38 +8,26 @@ const gallery = [
 
 export default function CafeteriaGallerySection() {
   return (
-    <section className="section">
-
+    <section className="section cafeteria-gallery-section">
       <div className="container">
+        <FadeIn className="service-section-intro cafeteria-section-intro">
+          <h2 className="section-heading">Nuestro Espacio</h2>
+        </FadeIn>
 
-        <h2 className="section-heading">
-          Nuestro Espacio
-        </h2>
-
-        <div className="grid grid-2">
-
+        <div className="grid grid-2 cafeteria-gallery-grid">
           {gallery.map((image, index) => (
             <FadeIn key={image} className="fade-in-grid-item" delay={index * 0.08}>
-
-            <div
-              className="service-card-image"
-            >
-
-              <img
-                src={image}
-                alt=""
-                className="service-card-bg"
-              />
-
-            </div>
+              <div className="service-card-image cafeteria-gallery-image">
+                <img
+                  src={image}
+                  alt=""
+                  className="service-card-bg"
+                />
+              </div>
             </FadeIn>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

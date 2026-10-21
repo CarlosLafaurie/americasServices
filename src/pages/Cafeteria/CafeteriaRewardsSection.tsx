@@ -1,3 +1,4 @@
+import AnimatedNumber from "../../components/common/AnimatedNumber";
 import FadeIn from "../../components/common/FadeIn";
 
 export default function CafeteriaRewardsSection() {
@@ -6,7 +7,7 @@ export default function CafeteriaRewardsSection() {
 
       <div className="container">
 
-        <FadeIn className="membership-card">
+        <FadeIn className="membership-card cafeteria-rewards-card">
 
           <span className="membership-badge">
             PUNTOS Y BENEFICIOS
@@ -22,18 +23,19 @@ export default function CafeteriaRewardsSection() {
             exclusivos dentro del complejo.
           </p>
 
-          <div className="membership-grid">
-
-            <div className="card">
-              <h3>+50</h3>
-              <p>Bebidas calientes</p>
-            </div>
-
-            <div className="card">
-              <h3>+80</h3>
-              <p>Bebidas especiales</p>
-            </div>
-
+          <div className="membership-grid cafeteria-rewards-grid">
+            <FadeIn className="fade-in-grid-item">
+              <div className="cafeteria-reward-item">
+                <h3><AnimatedNumber value={50} prefix="+" /></h3>
+                <p>Bebidas calientes</p>
+              </div>
+            </FadeIn>
+            <FadeIn className="fade-in-grid-item" delay={0.08}>
+              <div className="cafeteria-reward-item">
+                <h3><AnimatedNumber value={80} prefix="+" /></h3>
+                <p>Bebidas especiales</p>
+              </div>
+            </FadeIn>
           </div>
 
         </FadeIn>

@@ -3,6 +3,7 @@ import {
   useState,
 } from "react";
 import { motion } from "framer-motion";
+import AnimatedNumber from "../../components/common/AnimatedNumber";
 
 import type {
   CSSProperties,
@@ -489,9 +490,7 @@ export default function ProfilePage() {
                 </span>
 
                 <strong>
-                  {points.toLocaleString(
-                    "es-CO"
-                  )}
+                  <AnimatedNumber value={points} />
                 </strong>
               </div>
 
@@ -518,6 +517,13 @@ export default function ProfilePage() {
         </motion.section>
 
         <section className="profile-stats">
+          <motion.div
+            className="fade-in-grid-item"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
               <Sparkles size={20} />
@@ -525,9 +531,7 @@ export default function ProfilePage() {
 
             <div>
               <strong>
-                {points.toLocaleString(
-                  "es-CO"
-                )}
+                <AnimatedNumber value={points} />
               </strong>
 
               <span>
@@ -535,7 +539,15 @@ export default function ProfilePage() {
               </span>
             </div>
           </div>
+          </motion.div>
 
+          <motion.div
+            className="fade-in-grid-item"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
+          >
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
               <CarFront size={20} />
@@ -543,7 +555,7 @@ export default function ProfilePage() {
 
             <div>
               <strong>
-                {vehicles.length}
+                <AnimatedNumber value={vehicles.length} />
               </strong>
 
               <span>
@@ -551,7 +563,15 @@ export default function ProfilePage() {
               </span>
             </div>
           </div>
+          </motion.div>
 
+          <motion.div
+            className="fade-in-grid-item"
+            initial={dashboardLoading ? false : { opacity: 0, y: 16 }}
+            whileInView={dashboardLoading ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+          >
           <div className="profile-stat-card">
             <div className="profile-stat-icon">
               <History size={20} />
@@ -559,11 +579,7 @@ export default function ProfilePage() {
 
             <div>
               <strong>
-                {dashboardLoading
-                  ? "—"
-                  : servicesCount.toLocaleString(
-                      "es-CO"
-                    )}
+                {dashboardLoading ? "—" : <AnimatedNumber value={servicesCount} />}
               </strong>
 
               <span>
@@ -571,6 +587,7 @@ export default function ProfilePage() {
               </span>
             </div>
           </div>
+          </motion.div>
         </section>
 
         <section className="profile-membership-section">
@@ -711,13 +728,7 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        <motion.section
-          className="profile-dashboard-grid"
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.12 }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <section className="profile-dashboard-grid">
           <article className="profile-panel profile-personal-panel">
             <div className="profile-panel-header">
               <div className="profile-panel-title">
@@ -1240,17 +1251,16 @@ export default function ProfilePage() {
               </div>
             )}
           </article>
-        </motion.section>
+        </section>
 
-        <motion.section
-          className="profile-history"
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.12 }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <section className="profile-history">
           <div className="profile-history-heading">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
               <span className="profile-eyebrow">
                 Tu actividad
               </span>
@@ -1263,7 +1273,7 @@ export default function ProfilePage() {
                 Consulta tus atenciones más
                 recientes en American Services.
               </p>
-            </div>
+            </motion.div>
 
             {!dashboardLoading && (
               <span className="profile-history-total">
@@ -1300,7 +1310,13 @@ export default function ProfilePage() {
               text="Todavía no tienes servicios realizados."
             />
           ) : (
-            <div className="profile-history-list">
+            <motion.div
+              className="profile-history-list"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.12 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
               {recentServices.map(
                 (order) => (
                   <ServiceOrderItem
@@ -1311,9 +1327,9 @@ export default function ProfilePage() {
                   />
                 )
               )}
-            </div>
+            </motion.div>
           )}
-        </motion.section>
+        </section>
       </div>
     </section>
   );

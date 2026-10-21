@@ -28,52 +28,34 @@ const spaces = [
 
 export default function CoworkingSpacesSection() {
   return (
-    <section className="section">
-
+    <section className="section coworking-spaces-section">
       <div className="container">
+        <FadeIn className="service-section-intro coworking-section-intro">
+          <h2 className="section-heading">Nuestros Espacios</h2>
+          <p className="section-subtitle">
+            Diseñados para que aproveches cada minuto.
+          </p>
+        </FadeIn>
 
-        <h2 className="section-heading">
-          Nuestros Espacios
-        </h2>
-
-        <p className="section-subtitle">
-          Diseñados para que aproveches cada minuto.
-        </p>
-
-        <div className="grid grid-2">
-
+        <div className="grid grid-2 coworking-spaces-grid">
           {spaces.map((space, index) => (
             <FadeIn key={space.title} className="fade-in-grid-item" delay={index * 0.08}>
-
-            <div
-              className="service-card-image"
-            >
-
-              <img
-                src={space.image}
-                alt={space.title}
-                className="service-card-bg"
-              />
-
-              <div className="service-card-overlay" />
-
-              <div className="service-card-content">
-
-                <h3>{space.title}</h3>
-
-                <p>{space.desc}</p>
-
-              </div>
-
-            </div>
+              <article className="service-card-image coworking-space-card">
+                <img
+                  src={space.image}
+                  alt={space.title}
+                  className="service-card-bg"
+                />
+                <div className="service-card-overlay" />
+                <div className="service-card-content">
+                  <h3>{space.title}</h3>
+                  <p>{space.desc}</p>
+                </div>
+              </article>
             </FadeIn>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

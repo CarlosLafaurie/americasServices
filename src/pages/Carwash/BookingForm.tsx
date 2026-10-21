@@ -1,3 +1,5 @@
+import FadeIn from "../../components/common/FadeIn";
+
 export default function BookingForm() {
   return (
     <section className="booking-section">
@@ -6,7 +8,7 @@ export default function BookingForm() {
 
       <div className="container">
 
-        <div className="booking-container">
+        <FadeIn className="booking-container">
 
           <div>
 
@@ -85,7 +87,7 @@ export default function BookingForm() {
 
           </form>
 
-        </div>
+        </FadeIn>
 
       </div>
 

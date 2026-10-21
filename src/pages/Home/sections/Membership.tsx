@@ -2,7 +2,7 @@ import FadeIn from "../../../components/common/FadeIn";
 
 export default function Membership() {
   return (
-    <section className="section">
+    <section className="section home-membership-section">
       <div className="container">
           <div className="membership-premium">
           <FadeIn className="membership-image" direction="right">
@@ -28,12 +28,30 @@ export default function Membership() {
             </p>
 
             <div className="membership-grid">
-              <FadeIn className="fade-in-grid-item">✓ Lavados ilimitados</FadeIn>
-              <FadeIn className="fade-in-grid-item" delay={0.06}>✓ Puntos dobles</FadeIn>
-              <FadeIn className="fade-in-grid-item" delay={0.12}>✓ Descuentos en servicios</FadeIn>
-              <FadeIn className="fade-in-grid-item" delay={0.18}>✓ Café mensual gratis</FadeIn>
-              <FadeIn className="fade-in-grid-item" delay={0.24}>✓ Coworking preferencial</FadeIn>
-              <FadeIn className="fade-in-grid-item" delay={0.3}>✓ Atención prioritaria</FadeIn>
+              <FadeIn className="fade-in-grid-item membership-benefit">
+                <span className="membership-benefit-check" aria-hidden="true">✓</span>
+                <span>Lavados ilimitados</span>
+              </FadeIn>
+              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.06}>
+                <span className="membership-benefit-check" aria-hidden="true">✓</span>
+                <span>Puntos dobles</span>
+              </FadeIn>
+              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.12}>
+                <span className="membership-benefit-check" aria-hidden="true">✓</span>
+                <span>Descuentos en servicios</span>
+              </FadeIn>
+              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.18}>
+                <span className="membership-benefit-check" aria-hidden="true">✓</span>
+                <span>Café mensual gratis</span>
+              </FadeIn>
+              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.24}>
+                <span className="membership-benefit-check" aria-hidden="true">✓</span>
+                <span>Coworking preferencial</span>
+              </FadeIn>
+              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.3}>
+                <span className="membership-benefit-check" aria-hidden="true">✓</span>
+                <span>Atención prioritaria</span>
+              </FadeIn>
             </div>
 
             <button
