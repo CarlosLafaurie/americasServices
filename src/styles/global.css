@@ -190,8 +190,9 @@ ol {
 .home-hero {
   position: relative;
 
-  min-block-size: 700px;
-
+  min-block-size: 900px;
+  margin-block-start: -80px;
+  
   display: flex;
   align-items: flex-end;
 
@@ -341,7 +342,7 @@ ol {
 @media (max-width: 900px) {
   .home-hero {
     min-block-size: 0;
-
+    margin-block-start: 0px;
     aspect-ratio: 4 / 3;
 
     display: block;
