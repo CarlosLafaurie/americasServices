@@ -1,4 +1,5 @@
 import FadeIn from "../../../components/common/FadeIn";
+import membershipImage from "../../../assets/images/membership.jpg";
 
 export default function Membership() {
   return (
@@ -7,8 +8,10 @@ export default function Membership() {
           <div className="membership-premium">
           <FadeIn className="membership-image" direction="right">
             <img
-              src="https://images.pexels.com/photos/7821700/pexels-photo-7821700.jpeg"
+              src={membershipImage}
               alt="Membership Premium"
+              loading="lazy"
+              decoding="async"
             />
           </FadeIn>
 

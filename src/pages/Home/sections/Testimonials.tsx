@@ -75,6 +75,8 @@ export default function Testimonials() {
                     src={item.image}
                     alt={item.name}
                     className="testimonial-avatar"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   <div>

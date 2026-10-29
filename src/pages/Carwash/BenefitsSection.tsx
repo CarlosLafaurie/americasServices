@@ -10,6 +10,8 @@ export default function BenefitsSection() {
             <img
               src={car3}
               alt="Car Wash Premium"
+              loading="lazy"
+              decoding="async"
             />
           </FadeIn>
 

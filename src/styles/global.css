@@ -534,17 +534,6 @@ ol {
   background-size: cover;
 }
 
-.cafeteria-hero {
-  background-image:
-    url("https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg");
-}
-
-.coworking-hero {
-  background-image:
-    url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg");
-}
-
-
 .service-hero-overlay {
   position: absolute;
 
@@ -779,6 +768,10 @@ ol {
 @media (max-width: 520px) {
   .service-hero {
     min-block-size: 580px;
+  }
+
+  .carwash-hero {
+    background-position: 62% center;
   }
 
   .service-hero-content {
@@ -1038,8 +1031,6 @@ ol {
 
   text-decoration: none;
 
-  transform: translateZ(0);
-
   transition:
     transform .4s ease,
     border-color .4s ease,
@@ -1056,24 +1047,6 @@ ol {
   box-shadow:
     0 30px 70px
     rgba(0,0,0,.38);
-}
-
-.home-service-card .service-card-bg {
-  position: absolute;
-
-  inset: 0;
-
-  inline-size: 100%;
-  block-size: 100%;
-
-  object-fit: cover;
-
-  transition:
-    transform .7s ease;
-}
-
-.home-service-card:hover .service-card-bg {
-  transform: scale(1.035);
 }
 
 .home-service-card .service-card-overlay {
@@ -1367,12 +1340,12 @@ ol {
   position: absolute;
   inset: 0;
 
+  display: block;
+
   inline-size: 100%;
   block-size: 100%;
 
   object-fit: cover;
-
-  transition: transform 0.5s ease;
 }
 
 .service-card-overlay {
@@ -1401,10 +1374,6 @@ ol {
 .service-card-content p {
   color: rgba(255, 255, 255, 0.8);
   margin-block-end: 1.5rem;
-}
-
-.service-card-image:hover .service-card-bg {
-  transform: scale(1.035);
 }
 
 .stats-grid {
@@ -2106,19 +2075,14 @@ ol {
 }
 
 .membership-image img {
+  display: block;
+
   inline-size: 100%;
   block-size: 100%;
 
   object-fit: cover;
 
   object-position: center;
-
-  transition:
-    transform 0.6s ease;
-}
-
-.membership-premium:hover .membership-image img {
-  transform: scale(1.025);
 }
 
 
@@ -2513,19 +2477,13 @@ ol {
 }
 
 .carwash-benefits-image img {
+  display: block;
+
   inline-size: 100%;
   block-size: 100%;
 
   object-fit: cover;
   object-position: center;
-
-  transition:
-    transform 0.6s ease;
-}
-
-.carwash-benefits:hover
-.carwash-benefits-image img {
-  transform: scale(1.025);
 }
 
 
@@ -3067,8 +3025,7 @@ ol {
 
   overflow: hidden;
 
-  background: url("https://images.pexels.com/photos/6873177/pexels-photo-6873177.jpeg?_gl=1*bwkhkw*_ga*MjY1NTk5NDY3LjE3Nzg2NTA1OTI.*_ga_8JE65Q40S6*czE3ODE4MjgyOTQkbzQkZzEkdDE3ODE4MjgzMjkkajI1JGwwJGgw")
-    center center / cover;
+  background: #050505 center center / cover no-repeat;
 }
 
 .booking-overlay {
@@ -4291,11 +4248,6 @@ ol {
 
   margin-block-end: 2rem;
 
-  transition: 0.3s;
-}
-
-.login-logo-link:hover {
-  transform: scale(1.05);
 }
 
 .login-logo {
@@ -4471,11 +4423,6 @@ ol {
 
   margin-block-end: 2rem;
 
-  transition: 0.3s;
-}
-
-.register-logo-link:hover {
-  transform: scale(1.05);
 }
 
 .register-logo {
@@ -7090,41 +7037,6 @@ ol {
   min-inline-size: 7ch;
   min-block-size: 1em;
 }
-
-.carwash-trust-features .trust-feature-card {
-  block-size: 100%;
-  min-block-size: 180px;
-  padding: 1.5rem;
-  border-color: rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
-}
-
-.carwash-trust-features .trust-feature-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(201, 163, 78, 0.2);
-  background:
-    linear-gradient(145deg, rgba(201, 163, 78, 0.04), rgba(255, 255, 255, 0.012));
-}
-
-.carwash-trust-features .trust-feature-card h3 {
-  margin-block-end: 0.75rem;
-  color: var(--text-primary);
-  font-size: 1rem;
-}
-
-.carwash-trust-features .trust-feature-card p {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  line-height: 1.65;
-}
-
 .cafeteria-about-grid,
 .coworking-about-grid {
   align-items: stretch;
@@ -7134,9 +7046,16 @@ ol {
 .coworking-about-card {
   block-size: 100%;
   min-block-size: 185px;
+
   border-radius: 20px;
+
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.012)
+    );
+
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -7146,174 +7065,346 @@ ol {
 .cafeteria-about-card:hover,
 .coworking-about-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(201, 163, 78, 0.2);
+
+  border-color:
+    rgba(201, 163, 78, 0.2);
+
   background:
-    linear-gradient(145deg, rgba(201, 163, 78, 0.045), rgba(255, 255, 255, 0.012));
+    linear-gradient(
+      145deg,
+      rgba(201, 163, 78, 0.045),
+      rgba(255, 255, 255, 0.012)
+    );
 }
 
 .cafeteria-about-card h3,
 .coworking-about-card h3 {
   margin-block-end: 0.7rem;
+
   color: var(--text-primary);
+
   font-size: 1.05rem;
 }
 
 .cafeteria-about-card p,
 .coworking-about-card p {
   margin: 0;
+
   color: var(--text-secondary);
+
   font-size: 0.88rem;
 }
 
+
+/* ==========================
+   CAFETERIA / COWORKING GRIDS
+========================== */
+
 .cafeteria-menu-grid,
+.coworking-spaces-grid {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  max-inline-size: 1080px;
+
+  margin-inline: auto;
+
+  gap: 1.25rem;
+}
+
 .cafeteria-gallery-grid,
-.coworking-spaces-grid,
 .coworking-gallery-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   align-items: stretch;
 }
 
-.cafeteria-menu-card {
-  block-size: 100%;
-  min-block-size: 370px;
-  display: flex;
-  flex-direction: column;
+
+/* ==========================
+   CAFETERIA / COWORKING
+   SPACE CARDS
+========================== */
+
+.cafeteria-space-card,
+.coworking-space-card {
+  position: relative;
+
+  inline-size: 100%;
+  aspect-ratio: 4 / 3;
+
+  min-inline-size: 0;
+  min-block-size: 0;
+
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 24px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.17);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 22px;
+
+  background: #111;
+
+  box-shadow:
+    0 18px 48px
+    rgba(0, 0, 0, 0.18);
+
   transition:
-    transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.cafeteria-menu-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(201, 163, 78, 0.22);
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.25);
+.cafeteria-space-card:hover,
+.coworking-space-card:hover {
+  border-color:
+    rgba(201, 163, 78, 0.22);
+
+  box-shadow:
+    0 24px 56px
+    rgba(0, 0, 0, 0.26);
 }
 
-.cafeteria-menu-media {
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: #111;
+
+/* ==========================
+   SPACE CARD IMAGES
+========================== */
+
+.cafeteria-space-card .service-card-bg,
+.coworking-space-card .service-card-bg {
+  max-inline-size: none;
+
+  object-position: center;
+
+  pointer-events: none;
 }
 
-.cafeteria-menu-media img {
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  transition: transform 0.45s ease;
+
+/* ==========================
+   SPACE CARD OVERLAY
+========================== */
+
+.cafeteria-space-card .service-card-overlay,
+.coworking-space-card .service-card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.08) 42%,
+      rgba(0, 0, 0, 0.76) 100%
+    );
 }
 
-.cafeteria-menu-card:hover .cafeteria-menu-media img {
-  transform: scale(1.035);
+
+/* ==========================
+   SPACE CARD CONTENT
+========================== */
+
+.cafeteria-space-card .service-card-content,
+.coworking-space-card .service-card-content {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding:
+    clamp(
+      1.25rem,
+      2.2vw,
+      1.8rem
+    );
 }
 
-.cafeteria-menu-copy {
-  flex: 1;
-  padding: 1.35rem 1.5rem 1.5rem;
+.cafeteria-space-card .service-card-content h3,
+.coworking-space-card .service-card-content h3 {
+  margin:
+    0
+    0
+    0.45rem;
+
+  color: #fff;
+
+  font-size:
+    clamp(
+      1.3rem,
+      1.8vw,
+      1.65rem
+    );
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.03em;
 }
 
-.cafeteria-menu-copy h3 {
-  margin: 0 0 0.55rem;
-  color: var(--text-primary);
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-}
-
-.cafeteria-menu-copy p {
+.cafeteria-space-card .service-card-content p,
+.coworking-space-card .service-card-content p {
   max-inline-size: 38ch;
+
   margin: 0;
-  color: var(--text-secondary);
-  font-size: 0.86rem;
-  line-height: 1.65;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size: 0.84rem;
+
+  line-height: 1.5;
 }
+
+
+/* ==========================
+   GALLERY CARDS
+========================== */
 
 .cafeteria-gallery-image,
-.coworking-gallery-image,
-.coworking-space-card {
-  border-color: rgba(255, 255, 255, 0.075);
+.coworking-gallery-image {
+  inline-size: 100%;
+  min-block-size: 0;
+  aspect-ratio: 4 / 3;
+
+  border-color:
+    rgba(255, 255, 255, 0.075);
+
   border-radius: 22px;
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+
+  box-shadow:
+    0 18px 48px
+    rgba(0, 0, 0, 0.18);
 }
 
 .cafeteria-gallery-image:hover,
-.coworking-gallery-image:hover,
-.coworking-space-card:hover {
-  border-color: rgba(201, 163, 78, 0.22);
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.26);
+.coworking-gallery-image:hover {
+  border-color:
+    rgba(201, 163, 78, 0.22);
+
+  box-shadow:
+    0 24px 56px
+    rgba(0, 0, 0, 0.26);
 }
 
-.cafeteria-gallery-image .service-card-bg,
-.coworking-gallery-image .service-card-bg,
-.coworking-space-card .service-card-bg {
-  transition: transform 0.55s ease;
-}
-
-.cafeteria-gallery-image:hover .service-card-bg,
-.coworking-gallery-image:hover .service-card-bg,
-.coworking-space-card:hover .service-card-bg {
-  transform: scale(1.035);
-}
-
-.cafeteria-gallery-image .service-card-overlay,
-.coworking-space-card .service-card-overlay {
+.cafeteria-gallery-image .service-card-overlay {
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.78));
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.04),
+      rgba(0, 0, 0, 0.78)
+    );
 }
 
-.coworking-space-card .service-card-content {
-  padding: clamp(1.25rem, 3vw, 2rem);
-}
+
+/* ==========================
+   REWARDS
+========================== */
 
 .cafeteria-rewards-card,
 .coworking-rewards-card {
-  padding: clamp(1.5rem, 5vw, 3rem);
-  border: 1px solid rgba(201, 163, 78, 0.2);
+  padding:
+    clamp(
+      1.5rem,
+      5vw,
+      3rem
+    );
+
+  border:
+    1px solid
+    rgba(201, 163, 78, 0.2);
+
   border-radius: 28px;
+
   background:
-    radial-gradient(circle at 50% 0%, rgba(201, 163, 78, 0.09), transparent 48%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(201, 163, 78, 0.09),
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  box-shadow:
+    0 28px 70px
+    rgba(0, 0, 0, 0.25);
 }
 
 .cafeteria-rewards-card .membership-badge,
 .coworking-rewards-card .membership-badge {
-  border: 1px solid rgba(201, 163, 78, 0.2);
-  background: rgba(201, 163, 78, 0.08);
-  color: var(--color-primary-light);
+  border:
+    1px solid
+    rgba(201, 163, 78, 0.2);
+
+  background:
+    rgba(201, 163, 78, 0.08);
+
+  color:
+    var(--color-primary-light);
+
   font-size: 0.72rem;
   font-weight: 800;
+
   letter-spacing: 0.1em;
+
   text-transform: uppercase;
 }
 
 .cafeteria-rewards-card > h2,
 .coworking-rewards-card > h2 {
-  margin: 0 auto 0.9rem;
+  margin:
+    0
+    auto
+    0.9rem;
+
   max-inline-size: 680px;
-  font-size: clamp(1.9rem, 4vw, 3rem);
+
+  font-size:
+    clamp(
+      1.9rem,
+      4vw,
+      3rem
+    );
+
   line-height: 1.05;
+
   letter-spacing: -0.04em;
 }
 
 .cafeteria-rewards-card > p,
 .coworking-rewards-card > p {
   max-inline-size: 620px;
-  margin: 0 auto;
-  color: var(--text-secondary);
+
+  margin:
+    0
+    auto;
+
+  color:
+    var(--text-secondary);
+
   line-height: 1.7;
 }
 
 .cafeteria-rewards-grid,
 .coworking-rewards-grid {
   align-items: stretch;
+
   max-inline-size: 720px;
+
   margin-inline: auto;
 }
 
@@ -7321,16 +7412,30 @@ ol {
 .coworking-reward-item {
   block-size: 100%;
   min-block-size: 125px;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
+
   gap: 0.55rem;
+
   padding: 1.2rem;
-  border: 1px solid rgba(201, 163, 78, 0.15);
+
+  border:
+    1px solid
+    rgba(201, 163, 78, 0.15);
+
   border-radius: 18px;
+
   background:
-    linear-gradient(145deg, rgba(201, 163, 78, 0.055), rgba(255, 255, 255, 0.014));
+    linear-gradient(
+      145deg,
+      rgba(201, 163, 78, 0.055),
+      rgba(255, 255, 255, 0.014)
+    );
+
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -7340,24 +7445,46 @@ ol {
 .cafeteria-reward-item:hover,
 .coworking-reward-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(201, 163, 78, 0.25);
-  background: rgba(201, 163, 78, 0.07);
+
+  border-color:
+    rgba(201, 163, 78, 0.25);
+
+  background:
+    rgba(201, 163, 78, 0.07);
 }
 
 .cafeteria-reward-item h3,
 .coworking-reward-item h3 {
   margin: 0;
-  color: var(--color-primary-light);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-variant-numeric: tabular-nums;
+
+  color:
+    var(--color-primary-light);
+
+  font-size:
+    clamp(
+      1.5rem,
+      3vw,
+      2rem
+    );
+
+  font-variant-numeric:
+    tabular-nums;
 }
 
 .cafeteria-reward-item p,
 .coworking-reward-item p {
   margin: 0;
-  color: var(--text-secondary);
+
+  color:
+    var(--text-secondary);
+
   font-size: 0.82rem;
 }
+
+
+/* ==========================
+   PROFILE / FOCUS
+========================== */
 
 .profile-hero-points strong,
 .profile-stat-card:first-child strong {
@@ -7375,22 +7502,44 @@ ol {
 .auth-back-button:focus-visible,
 .login-register:focus-visible,
 .register-login:focus-visible {
-  outline: 2px solid var(--color-primary-light);
+  outline:
+    2px solid
+    var(--color-primary-light);
+
   outline-offset: 4px;
 }
+
+
+/* ==========================
+   TABLET
+========================== */
 
 @media (max-width: 900px) {
   .cafeteria-about-grid,
   .coworking-about-grid,
   .carwash-trust-features {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .cafeteria-menu-grid,
+  .coworking-spaces-grid {
+    max-inline-size: 820px;
+
+    gap: 1rem;
   }
 
   .cafeteria-rewards-grid,
   .coworking-rewards-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 }
+
+
+/* ==========================
+   MOBILE
+========================== */
 
 @media (max-width: 620px) {
   .cafeteria-menu-grid,
@@ -7398,11 +7547,8 @@ ol {
   .coworking-spaces-grid,
   .coworking-gallery-grid,
   .carwash-services-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .cafeteria-menu-card {
-    min-block-size: 0;
+    grid-template-columns:
+      minmax(0, 1fr);
   }
 
   .cafeteria-about-grid,
@@ -7410,11 +7556,42 @@ ol {
   .carwash-trust-features,
   .cafeteria-rewards-grid,
   .coworking-rewards-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns:
+      minmax(0, 1fr);
   }
 
-  .cafeteria-menu-media {
-    aspect-ratio: 16 / 9;
+  .cafeteria-menu-grid,
+  .coworking-spaces-grid {
+    max-inline-size: 100%;
+
+    gap: 1rem;
+  }
+
+  .cafeteria-space-card,
+  .coworking-space-card {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 18px;
+  }
+
+  .cafeteria-space-card .service-card-content,
+  .coworking-space-card .service-card-content {
+    padding: 1.2rem;
+  }
+
+  .cafeteria-space-card .service-card-content h3,
+  .coworking-space-card .service-card-content h3 {
+    font-size:
+      clamp(
+        1.25rem,
+        6vw,
+        1.55rem
+      );
+  }
+
+  .cafeteria-space-card .service-card-content p,
+  .coworking-space-card .service-card-content p {
+    font-size: 0.8rem;
   }
 
   .carwash-service-card {
@@ -7436,14 +7613,30 @@ ol {
 
   .login-card,
   .register-card {
-    padding: clamp(1.25rem, 5vw, 2rem);
+    padding:
+      clamp(
+        1.25rem,
+        5vw,
+        2rem
+      );
+
     border-radius: 22px;
   }
 
   .cta-section-content h2 {
-    font-size: clamp(2.2rem, 9vw, 3rem);
+    font-size:
+      clamp(
+        2.2rem,
+        9vw,
+        3rem
+      );
   }
 }
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
 
 @media (max-width: 420px) {
   .home-stat-card {
@@ -7452,6 +7645,7 @@ ol {
 
   .home-testimonial-card {
     min-block-size: 0;
+
     padding: 1.3rem;
   }
 
@@ -7466,17 +7660,18 @@ ol {
   }
 }
 
+
+/* ==========================
+   REDUCED MOTION
+========================== */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .home-service-card:hover,
-  .home-service-card:hover .service-card-bg,
   .service-card-image:hover,
-  .service-card-image:hover .service-card-bg,
-  .membership-premium:hover .membership-image img,
-  .carwash-benefits:hover .carwash-benefits-image img,
   .carwash-benefit-item:hover,
   .home-stat-card:hover,
   .home-testimonial-card:hover,
@@ -7486,11 +7681,6 @@ ol {
   .process-step:hover .process-number,
   .cafeteria-about-card:hover,
   .coworking-about-card:hover,
-  .cafeteria-menu-card:hover,
-  .cafeteria-menu-card:hover .cafeteria-menu-media img,
-  .cafeteria-gallery-image:hover .service-card-bg,
-  .coworking-gallery-image:hover .service-card-bg,
-  .coworking-space-card:hover .service-card-bg,
   .cafeteria-reward-item:hover,
   .coworking-reward-item:hover {
     transform: none;
@@ -7499,9 +7689,16 @@ ol {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
   }
 }

@@ -1,29 +1,31 @@
 import FadeIn from "../../components/common/FadeIn";
+
+import coworkingImage1 from "../../assets/images/cow6.jpg";
+import coworkingImage2 from "../../assets/images/cow1.jpg";
+import coworkingImage3 from "../../assets/images/cow4.jpg";
+import coworkingImage4 from "../../assets/images/cow9.jpg";
+
 const spaces = [
   {
     title: "Zona de Trabajo",
-    image:
-      "https://images.pexels.com/photos/8067881/pexels-photo-8067881.jpeg",
-    desc: "Espacios amplios para trabajar cómodamente."
+    image: coworkingImage1,
+    desc: "Espacios amplios para trabajar cómodamente.",
   },
   {
     title: "Sala de Reuniones",
-    image:
-      "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg",
-    desc: "Ideal para reuniones rápidas y videollamadas."
+    image: coworkingImage2,
+    desc: "Ideal para reuniones rápidas y videollamadas.",
   },
   {
     title: "Zona Lounge",
-    image:
-      "https://images.pexels.com/photos/6774956/pexels-photo-6774956.jpeg",
-    desc: "Un ambiente relajado para descansar o conversar."
+    image: coworkingImage3,
+    desc: "Un ambiente relajado para descansar o conversar.",
   },
   {
     title: "Espacios Flexibles",
-    image:
-      "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg",
-    desc: "Adaptados a diferentes necesidades de trabajo."
-  }
+    image: coworkingImage4,
+    desc: "Adaptados a diferentes necesidades de trabajo.",
+  },
 ];
 
 export default function CoworkingSpacesSection() {
@@ -31,7 +33,10 @@ export default function CoworkingSpacesSection() {
     <section className="section coworking-spaces-section">
       <div className="container">
         <FadeIn className="service-section-intro coworking-section-intro">
-          <h2 className="section-heading">Nuestros Espacios</h2>
+          <h2 className="section-heading">
+            Nuestros Espacios
+          </h2>
+
           <p className="section-subtitle">
             Diseñados para que aproveches cada minuto.
           </p>
@@ -39,16 +44,25 @@ export default function CoworkingSpacesSection() {
 
         <div className="grid grid-2 coworking-spaces-grid">
           {spaces.map((space, index) => (
-            <FadeIn key={space.title} className="fade-in-grid-item" delay={index * 0.08}>
+            <FadeIn
+              key={space.title}
+              className="fade-in-grid-item"
+              delay={index * 0.08}
+            >
               <article className="service-card-image coworking-space-card">
                 <img
                   src={space.image}
                   alt={space.title}
                   className="service-card-bg"
+                  loading="lazy"
+                  decoding="async"
                 />
+
                 <div className="service-card-overlay" />
+
                 <div className="service-card-content">
                   <h3>{space.title}</h3>
+
                   <p>{space.desc}</p>
                 </div>
               </article>

@@ -1,50 +1,56 @@
 import FadeIn from "../../components/common/FadeIn";
+import cafeteriaHeroImage from "../../assets/images/cucaf1.jpg";
 
 export default function CafeteriaHero() {
   return (
-    <section className="service-hero cafeteria-hero">
+    <section
+      className="service-hero cafeteria-hero"
+      style={{
+        backgroundImage: `url(${cafeteriaHeroImage})`,
+      }}
+    >
       <div className="service-hero-overlay" />
 
       <div className="container service-hero-container">
         <div className="service-hero-content">
           <FadeIn delay={0}>
-          <span className="service-hero-badge">
-            CAFETERÍA PREMIUM
-          </span>
+            <span className="service-hero-badge">
+              CAFETERÍA PREMIUM
+            </span>
           </FadeIn>
 
           <FadeIn delay={0.08}>
-          <h1 className="service-hero-title">
-            Café, snacks y
-            <br />
-            momentos para disfrutar
-          </h1>
+            <h1 className="service-hero-title">
+              Café, snacks y
+              <br />
+              momentos para disfrutar
+            </h1>
           </FadeIn>
 
           <FadeIn delay={0.16}>
-          <p className="service-hero-description">
-            Mientras tu vehículo recibe atención,
-            disfruta café premium, bebidas especiales
-            y un espacio cómodo para relajarte.
-          </p>
+            <p className="service-hero-description">
+              Mientras tu vehículo recibe atención,
+              disfruta café premium, bebidas especiales
+              y un espacio cómodo para relajarte.
+            </p>
           </FadeIn>
 
           <FadeIn delay={0.24}>
-          <div className="service-hero-actions">
-            <button
-              type="button"
-              className="btn-primary"
-            >
-              Ver Menú
-            </button>
+            <div className="service-hero-actions">
+              <button
+                type="button"
+                className="btn-primary"
+              >
+                Ver Menú
+              </button>
 
-            <button
-              type="button"
-              className="btn-secondary"
-            >
-              Conocer Más
-            </button>
-          </div>
+              <button
+                type="button"
+                className="btn-secondary"
+              >
+                Conocer Más
+              </button>
+            </div>
           </FadeIn>
         </div>
       </div>

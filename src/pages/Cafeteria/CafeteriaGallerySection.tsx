@@ -1,9 +1,14 @@
 import FadeIn from "../../components/common/FadeIn";
+import cafeteriaGalleryImage1 from "../../assets/images/cucaf5.jpg";
+import cafeteriaGalleryImage2 from "../../assets/images/cucaf6.jpg";
+import cafeteriaGalleryImage3 from "../../assets/images/cucaf1.jpg";
+import cafeteriaGalleryImage4 from "../../assets/images/IMG_0314.jpg";
+
 const gallery = [
-  "https://images.pexels.com/photos/4765826/pexels-photo-4765826.jpeg",
-  "https://images.pexels.com/photos/8425194/pexels-photo-8425194.jpeg",
-  "https://images.pexels.com/photos/34056733/pexels-photo-34056733.jpeg",
-  "https://images.pexels.com/photos/18999559/pexels-photo-18999559.jpeg"
+  cafeteriaGalleryImage1,
+  cafeteriaGalleryImage2,
+  cafeteriaGalleryImage3,
+  cafeteriaGalleryImage4,
 ];
 
 export default function CafeteriaGallerySection() {
@@ -22,6 +27,8 @@ export default function CafeteriaGallerySection() {
                   src={image}
                   alt=""
                   className="service-card-bg"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </FadeIn>

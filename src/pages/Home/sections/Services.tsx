@@ -1,8 +1,8 @@
 import FadeIn from "../../../components/common/FadeIn";
 import { Link } from "react-router-dom";
 import carwashImage from "../../../assets/images/car3.jpeg";
-import cafeteriaImage from "../../../assets/images/car2.jpeg";
-import coworkingImage from "../../../assets/images/car4.jpeg";
+import cafeteriaImage from "../../../assets/images/cucaf1.jpg";
+import coworkingImage from "../../../assets/images/cow3.jpg";
 
 const services = [
   {
@@ -62,6 +62,8 @@ export default function Services() {
                 src={service.image}
                 alt={service.title}
                 className="service-card-bg"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="service-card-overlay" />

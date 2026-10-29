@@ -1,8 +1,14 @@
 import FadeIn from "../../components/common/FadeIn";
+import bookingBackgroundImage from "../../assets/images/car2.jpeg";
 
 export default function BookingForm() {
   return (
-    <section className="booking-section">
+    <section
+      className="booking-section"
+      style={{
+        backgroundImage: `url(${bookingBackgroundImage})`,
+      }}
+    >
 
       <div className="booking-overlay" />
 

@@ -1,9 +1,14 @@
 import FadeIn from "../../components/common/FadeIn";
+import coworkingGalleryImage1 from "../../assets/images/cow2.jpg";
+import coworkingGalleryImage2 from "../../assets/images/cow5.jpg";
+import coworkingGalleryImage3 from "../../assets/images/cow8.jpg";
+import coworkingGalleryImage4 from "../../assets/images/cow10.jpg";
+
 const gallery = [
-  "https://images.pexels.com/photos/18678225/pexels-photo-18678225.jpeg",
-  "https://images.pexels.com/photos/23496667/pexels-photo-23496667.jpeg",
-  "https://images.pexels.com/photos/3515641/pexels-photo-3515641.jpeg",
-  "https://images.pexels.com/photos/18999471/pexels-photo-18999471.jpeg"
+  coworkingGalleryImage1,
+  coworkingGalleryImage2,
+  coworkingGalleryImage3,
+  coworkingGalleryImage4,
 ];
 
 export default function CoworkingGallerySection() {
@@ -22,6 +27,8 @@ export default function CoworkingGallerySection() {
                   src={image}
                   alt=""
                   className="service-card-bg"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </FadeIn>
