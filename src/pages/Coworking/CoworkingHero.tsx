@@ -2,6 +2,23 @@ import FadeIn from "../../components/common/FadeIn";
 import coworkingHeroImage from "../../assets/images/cow3.jpg";
 
 export default function CoworkingHero() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    element.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section
       className="service-hero coworking-hero"
@@ -40,6 +57,7 @@ export default function CoworkingHero() {
               <button
                 type="button"
                 className="btn-primary"
+                onClick={() => scrollToSection("coworking-spaces")}
               >
                 Conocer Espacios
               </button>
@@ -47,6 +65,7 @@ export default function CoworkingHero() {
               <button
                 type="button"
                 className="btn-secondary"
+                onClick={() => scrollToSection("coworking-benefits")}
               >
                 Ver Beneficios
               </button>

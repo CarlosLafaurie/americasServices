@@ -2,6 +2,23 @@ import FadeIn from "../../components/common/FadeIn";
 import cafeteriaHeroImage from "../../assets/images/cucaf1.jpg";
 
 export default function CafeteriaHero() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    element.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section
       className="service-hero cafeteria-hero"
@@ -40,15 +57,17 @@ export default function CafeteriaHero() {
               <button
                 type="button"
                 className="btn-primary"
+                onClick={() => scrollToSection("cafeteria-about")}
               >
-                Ver Menú
+                beneficios
               </button>
 
               <button
                 type="button"
                 className="btn-secondary"
+                onClick={() => scrollToSection("cafeteria-benefits")}
               >
-                Conocer Más
+                Programa de puntos
               </button>
             </div>
           </FadeIn>

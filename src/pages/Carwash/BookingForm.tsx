@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 import FadeIn from "../../components/common/FadeIn";
 import bookingBackgroundImage from "../../assets/images/car2.jpeg";
 
 export default function BookingForm() {
+  const navigate = useNavigate();
+
   return (
     <section
       className="booking-section"
@@ -9,94 +13,52 @@ export default function BookingForm() {
         backgroundImage: `url(${bookingBackgroundImage})`,
       }}
     >
-
       <div className="booking-overlay" />
 
       <div className="container">
-
         <FadeIn className="booking-container">
-
           <div>
-
             <span className="membership-badge">
-              RESERVA ONLINE
+              CUIDADO PROFESIONAL
             </span>
 
             <h2 className="section-heading text-left">
-              Agenda tu lavado
+              Dale a tu vehículo
+              <br />
+              el cuidado que merece
             </h2>
 
             <p className="section-subtitle text-left">
-              Selecciona fecha, hora y servicio.
-              Recibirás puntos automáticamente
-              después de completar tu reserva.
+              Nos preocupamos por cada detalle de tu vehículo y trabajamos
+              para ofrecerle el mejor cuidado en cada visita.
             </p>
-
           </div>
 
-          <form className="booking-form">
+          <div className="booking-form">
+            <span className="membership-badge">
+              PROGRAMA DE BENEFICIOS
+            </span>
 
-            <input
-              type="text"
-              placeholder="Nombre completo"
-            />
+            <h3>
+              Cada visita puede darte más
+            </h3>
 
-            <input
-              type="text"
-              placeholder="Teléfono"
-            />
-
-            <input
-              type="text"
-              placeholder="Vehículo"
-            />
-
-            <input
-              type="text"
-              placeholder="Placa"
-            />
-
-            <input type="date" />
-
-            <input type="time" />
-
-            <select>
-
-              <option>
-                Selecciona un servicio
-              </option>
-
-              <option>
-                Lavado Básico
-              </option>
-
-              <option>
-                Lavado Premium
-              </option>
-
-              <option>
-                Lavado Ejecutivo
-              </option>
-
-              <option>
-                Detailing
-              </option>
-
-            </select>
+            <p>
+              Regístrate en American Services, acumula puntos con tus
+              servicios y compras, consulta tu saldo y accede a beneficios
+              pensados para nuestros clientes.
+            </p>
 
             <button
-              type="submit"
+              type="button"
               className="button"
+              onClick={() => navigate("/register")}
             >
-              Reservar Servicio
+              Crear mi cuenta
             </button>
-
-          </form>
-
+          </div>
         </FadeIn>
-
       </div>
-
     </section>
   );
 }

@@ -1,40 +1,55 @@
-import AnimatedNumber from "../../components/common/AnimatedNumber";
 import FadeIn from "../../components/common/FadeIn";
 
 const stats = [
-  { value: 5000, prefix: "+", label: "Vehículos atendidos" },
-  { value: 98, suffix: "%", label: "Satisfacción de clientes" },
-  { value: 7, suffix: " Días", label: "Atención semanal" },
-  { value: 50000, prefix: "+", label: "Puntos entregados" },
+  {
+    value: "7 Días",
+    label: "Atención semanal",
+  },
+  {
+    value: "WiFi",
+    label: "Conectividad disponible",
+  },
+  {
+    value: "Puntos",
+    label: "Beneficios por tus compras",
+  },
+  {
+    value: "Todo en uno",
+    label: "Car Wash, cafetería y coworking",
+  },
 ];
 
 const features = [
   {
     title: "Programa de Puntos",
     description:
-      "Acumula puntos con cada lavado y canjéalos por servicios, productos o beneficios exclusivos.",
+      "Acumula puntos con tus servicios y compras para redimirlos en productos y beneficios disponibles.",
   },
   {
     title: "Zona de Espera Premium",
     description:
-      "Cafetería, wifi de alta velocidad y espacios cómodos mientras atendemos tu vehículo.",
+      "Disfruta cafetería, conexión WiFi y espacios cómodos mientras atendemos tu vehículo.",
   },
   {
-    title: "Reservas Online",
+    title: "Experiencia Integral",
     description:
-      "Agenda tu servicio desde la web y evita filas o tiempos de espera innecesarios.",
+      "Car Wash, cafetería y coworking reunidos en un mismo lugar para que aproveches mejor tu tiempo.",
   },
 ];
 
 export default function TrustSection() {
   return (
-    <section className="section carwash-trust-section">
+    <section id="carwash-trust" className="section carwash-trust-section">
       <div className="container">
         <FadeIn className="service-section-intro carwash-section-intro">
-          <h2 className="section-heading">¿Por qué elegirnos?</h2>
+          <h2 className="section-heading">
+            ¿Por qué elegirnos?
+          </h2>
+
           <p className="section-subtitle">
-            Combinamos tecnología, comodidad y beneficios
-            exclusivos para ofrecer una experiencia superior.
+            Cuidamos tu vehículo mientras tú aprovechas tu tiempo en un
+            espacio pensado para ofrecer comodidad, beneficios y una mejor
+            experiencia en cada visita.
           </p>
         </FadeIn>
 
@@ -46,14 +61,10 @@ export default function TrustSection() {
               delay={index * 0.07}
             >
               <article className="trust-card">
-                <h3>
-                  <AnimatedNumber
-                    value={item.value}
-                    prefix={item.prefix}
-                    suffix={item.suffix}
-                    className="carwash-trust-value"
-                  />
+                <h3 className="carwash-trust-value">
+                  {item.value}
                 </h3>
+
                 <p>{item.label}</p>
               </article>
             </FadeIn>
@@ -69,6 +80,7 @@ export default function TrustSection() {
             >
               <article className="card trust-feature-card">
                 <h3>{feature.title}</h3>
+
                 <p>{feature.description}</p>
               </article>
             </FadeIn>

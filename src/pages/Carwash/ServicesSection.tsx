@@ -10,7 +10,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="section carwash-services-section">
+    <section id="carwash-services" className="section carwash-services-section">
       <div className="container">
         <FadeIn className="service-section-intro carwash-section-intro">
           <h2 className="section-heading">Nuestros Servicios</h2>

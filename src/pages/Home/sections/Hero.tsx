@@ -3,6 +3,23 @@ import { motion } from "framer-motion";
 import heroVideo from "../../../assets/videos/hero-americas.mp4";
 
 export default function Hero() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    element.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section className="home-hero">
       <video
@@ -57,6 +74,7 @@ export default function Hero() {
             <button
               type="button"
               className="btn-primary"
+              onClick={() => scrollToSection("home-services")}
             >
               Reservar servicio
             </button>
@@ -64,6 +82,7 @@ export default function Hero() {
             <button
               type="button"
               className="btn-secondary"
+              onClick={() => scrollToSection("home-benefits")}
             >
               Conocer beneficios
             </button>
