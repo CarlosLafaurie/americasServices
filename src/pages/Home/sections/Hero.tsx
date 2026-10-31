@@ -74,17 +74,17 @@ export default function Hero() {
             <button
               type="button"
               className="btn-primary"
-              onClick={() => scrollToSection("home-services")}
+              onClick={() => scrollToSection("home-loyalty")}
             >
-              Reservar servicio
+              Conocer beneficios
             </button>
 
             <button
               type="button"
               className="btn-secondary"
-              onClick={() => scrollToSection("home-benefits")}
+              onClick={() => scrollToSection("home-testimonials")}
             >
-              Conocer beneficios
+              Ver reseñas
             </button>
           </div>
         </motion.div>

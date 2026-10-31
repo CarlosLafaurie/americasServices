@@ -2,41 +2,52 @@ import AnimatedNumber from "../../../components/common/AnimatedNumber";
 import FadeIn from "../../../components/common/FadeIn";
 
 const stats = [
-  { value: 5000, suffix: "+", decimals: 0, label: "Clientes satisfechos" },
-  { value: 25000, suffix: "+", decimals: 0, label: "Servicios realizados" },
-  { value: 4.9, suffix: "/5", decimals: 1, label: "Calificación promedio" },
+  {
+    value: 2000,
+    suffix: "+",
+    decimals: 0,
+    label: "Clientes satisfechos",
+  },
+  {
+    value: 15000,
+    suffix: "+",
+    decimals: 0,
+    label: "Servicios realizados",
+  },
+  {
+    value: 4.9,
+    suffix: "/5",
+    decimals: 1,
+    label: "Calificación promedio",
+  },
 ];
 
 const testimonials = [
   {
-    name: "Carlos M.",
-    role: "Cliente Premium",
-    image:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=300",
-    text: "Lavo mi carro cada semana y los puntos realmente valen la pena.",
+    name: "Carlos L.",
+    role: "Cliente",
+    text: "excelente servicio, buenos ambientes para trabajar o solo para pasar el rato mientras lavan tu carro.",
   },
   {
-    name: "Laura G.",
-    role: "Cliente Frecuente",
-    image:
-      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300",
-    text: "Mientras lavan mi vehículo trabajo desde el coworking.",
+    name: "Camila A.",
+    role: "Cliente",
+    text: "Me gustó mucho la atención y la comodidad del lugar. Mientras atendían mi carro pude tomar un café y esperar tranquilo.",
   },
   {
-    name: "Andrés R.",
-    role: "Cliente Premium",
-    image:
-      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=300",
-    text: "La barbería y la cafetería son excelentes. Todo en un mismo lugar.",
+    name: "Jhonny C.",
+    role: "Cliente",
+    text: "Sin duda el mejor lugar para consentir a tu vehículo.",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="section home-social-proof-section">
+    <section id="home-testimonials" className="section home-social-proof-section">
       <div className="container">
         <FadeIn className="home-social-proof-heading">
-          <h2 className="section-heading">Lo que dicen nuestros clientes</h2>
+          <h2 className="section-heading">
+            Lo que dicen nuestros clientes
+          </h2>
         </FadeIn>
 
         <div className="stats-grid home-stats-grid">
@@ -56,7 +67,10 @@ export default function Testimonials() {
                     className="home-stat-count"
                   />
                 </h3>
-                <span>{stat.label}</span>
+
+                <span>
+                  {stat.label}
+                </span>
               </div>
             </FadeIn>
           ))}
@@ -71,17 +85,14 @@ export default function Testimonials() {
             >
               <article className="testimonial-card home-testimonial-card">
                 <div className="testimonial-header">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="testimonial-avatar"
-                    loading="lazy"
-                    decoding="async"
-                  />
-
                   <div>
-                    <strong>{item.name}</strong>
-                    <span>{item.role}</span>
+                    <strong>
+                      {item.name}
+                    </strong>
+
+                    <span>
+                      {item.role}
+                    </span>
                   </div>
                 </div>
 
@@ -94,7 +105,9 @@ export default function Testimonials() {
                 </div>
 
                 <blockquote>
-                  <p>"{item.text}"</p>
+                  <p>
+                    "{item.text}"
+                  </p>
                 </blockquote>
               </article>
             </FadeIn>

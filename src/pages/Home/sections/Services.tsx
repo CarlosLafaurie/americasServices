@@ -42,8 +42,9 @@ export default function Services() {
           </h2>
 
           <p className="home-services-description">
-            Cuida tu vehículo, disfruta nuestra cafetería
-            y aprovecha espacios cómodos mientras esperas.
+            Cuida tu vehículo con servicios pensados para mantenerlo siempre en las
+            mejores condiciones, disfruta nuestra cafetería y aprovecha espacios cómodos
+            para trabajar, relajarte o compartir mientras esperas.
           </p>
         </FadeIn>
 

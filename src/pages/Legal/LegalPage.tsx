@@ -9,9 +9,7 @@ import {
   UserRoundCheck,
 } from "lucide-react";
 
-
-const LAST_UPDATE =
-  "26 de agosto de 2026";
+const LAST_UPDATE = "30 de octubre de 2026";
 
 export default function LegalPage() {
   return (
@@ -31,11 +29,9 @@ export default function LegalPage() {
           </h1>
 
           <p>
-            Consulta las condiciones de uso de
-            Americas Services, nuestra política
-            de privacidad, tratamiento de datos
-            personales y las reglas generales
-            del programa de fidelización.
+            Consulta las condiciones de uso de Americas Services, nuestra
+            política de privacidad, tratamiento de datos personales y las
+            reglas generales del programa de fidelización.
           </p>
 
           <span className="legal-update">
@@ -101,10 +97,8 @@ export default function LegalPage() {
             title="Términos y condiciones"
           >
             <p>
-              El acceso y utilización de la
-              website de Americas Services
-              implica el cumplimiento de las
-              condiciones establecidas en esta
+              El acceso y utilización de la website de Americas Services
+              implica el cumplimiento de las condiciones establecidas en esta
               sección.
             </p>
 
@@ -113,21 +107,16 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              La website permite consultar
-              información sobre los servicios
-              ofrecidos por Americas Services,
-              acceder al programa de
-              fidelización y utilizar las
-              funcionalidades habilitadas para
+              La website permite consultar información sobre los servicios
+              ofrecidos por Americas Services, acceder al programa de
+              fidelización y utilizar las funcionalidades habilitadas para
               clientes registrados.
             </p>
 
             <p>
-              El usuario se compromete a
-              proporcionar información veraz,
-              actualizada y completa cuando sea
-              necesaria para crear o mantener su
-              cuenta.
+              El usuario se compromete a proporcionar información veraz,
+              actualizada y completa cuando sea necesaria para crear o mantener
+              su cuenta.
             </p>
 
             <h3>
@@ -135,21 +124,16 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              Cada cliente es responsable de
-              conservar la confidencialidad de
-              sus credenciales de acceso y de
-              informar oportunamente cualquier
+              Cada cliente es responsable de conservar la confidencialidad de
+              sus credenciales de acceso y de informar oportunamente cualquier
               uso no autorizado de su cuenta.
             </p>
 
             <p>
-              Americas Services podrá limitar o
-              suspender el acceso cuando detecte
-              uso fraudulento, abuso de la
-              plataforma, incumplimiento de
-              estas condiciones o situaciones
-              que comprometan la seguridad del
-              sistema.
+              Americas Services podrá limitar o suspender el acceso cuando
+              detecte uso fraudulento, abuso de la plataforma, incumplimiento
+              de estas condiciones o situaciones que comprometan la seguridad
+              del sistema.
             </p>
 
             <h3>
@@ -157,22 +141,15 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              Los precios, disponibilidad,
-              horarios, beneficios y
-              características publicados podrán
-              actualizarse cuando cambien las
-              condiciones comerciales del
-              servicio.
+              Los precios, disponibilidad, horarios, beneficios y
+              características publicados podrán actualizarse cuando cambien
+              las condiciones comerciales del servicio.
             </p>
 
             <p>
-              Cuando una transacción o
-              prestación de servicios se
-              encuentre sometida a normas de
-              protección al consumidor, se
-              respetarán los derechos que la
-              legislación colombiana reconozca
-              al consumidor.
+              Cuando una transacción o prestación de servicios se encuentre
+              sometida a normas de protección al consumidor, se respetarán los
+              derechos que la legislación colombiana reconozca al consumidor.
             </p>
 
             <h3>
@@ -180,14 +157,10 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              Los signos distintivos, diseños,
-              textos, interfaces, fotografías y
-              demás contenido propio de
-              Americas Services no podrán ser
-              reproducidos o explotados
-              comercialmente sin autorización,
-              salvo los usos permitidos por la
-              ley.
+              Los signos distintivos, diseños, textos, interfaces, fotografías
+              y demás contenido propio de Americas Services no podrán ser
+              reproducidos o explotados comercialmente sin autorización, salvo
+              los usos permitidos por la ley.
             </p>
           </LegalSection>
 
@@ -198,14 +171,10 @@ export default function LegalPage() {
             title="Política de privacidad"
           >
             <p>
-              Americas Services procura tratar
-              únicamente la información
-              necesaria para prestar sus
-              servicios, administrar las cuentas
-              de clientes, gestionar el programa
-              de fidelización y cumplir sus
-              obligaciones administrativas,
-              comerciales y legales.
+              Americas Services procura tratar únicamente la información
+              necesaria para prestar sus servicios, administrar las cuentas de
+              clientes, gestionar el programa de fidelización y cumplir sus
+              obligaciones administrativas, comerciales y legales.
             </p>
 
             <h3>
@@ -222,39 +191,32 @@ export default function LegalPage() {
               </li>
 
               <li>
-                Fecha de nacimiento cuando haya
-                sido suministrada.
+                Fecha de nacimiento cuando haya sido suministrada.
               </li>
 
               <li>
-                Información asociada a vehículos,
-                incluyendo placa y tipo de
+                Información asociada a vehículos, incluyendo placa y tipo de
                 vehículo.
               </li>
 
               <li>
-                Historial de servicios y
-                transacciones.
+                Historial de servicios y transacciones.
               </li>
 
               <li>
-                Información necesaria para
-                facturación.
+                Información necesaria para facturación.
               </li>
 
               <li>
-                Puntos acumulados, historial de
-                puntos y nivel de membresía.
+                Puntos acumulados, historial de puntos y nivel de membresía.
               </li>
 
               <li>
-                Preferencias de comunicaciones
-                comerciales.
+                Preferencias de comunicaciones comerciales.
               </li>
 
               <li>
-                Información técnica necesaria
-                para seguridad y funcionamiento
+                Información técnica necesaria para seguridad y funcionamiento
                 de la plataforma.
               </li>
             </ul>
@@ -264,20 +226,15 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              La autorización para recibir
-              publicidad, promociones,
-              beneficios u otras comunicaciones
-              comerciales es independiente del
-              tratamiento necesario para
-              administrar la cuenta y prestar
-              los servicios solicitados.
+              La autorización para recibir publicidad, promociones, beneficios
+              u otras comunicaciones comerciales es independiente del
+              tratamiento necesario para administrar la cuenta y prestar los
+              servicios solicitados.
             </p>
 
             <p>
-              El cliente podrá modificar esta
-              preferencia mediante los
-              mecanismos que Americas Services
-              habilite.
+              El cliente podrá modificar esta preferencia mediante los
+              mecanismos que Americas Services habilite.
             </p>
           </LegalSection>
 
@@ -288,12 +245,9 @@ export default function LegalPage() {
             title="Tratamiento de datos personales"
           >
             <p>
-              El tratamiento de información
-              personal se realizará conforme a
-              las finalidades informadas al
-              titular y a la normativa
-              colombiana aplicable en materia de
-              protección de datos personales.
+              El tratamiento de información personal se realizará conforme a
+              las finalidades informadas al titular y a la normativa colombiana
+              aplicable en materia de protección de datos personales.
             </p>
 
             <h3>
@@ -313,6 +267,26 @@ export default function LegalPage() {
 
               <div>
                 <span>
+                  Razón social
+                </span>
+
+                <strong>
+                  AMERICA S TRANSPORT S A S
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  NIT
+                </span>
+
+                <strong>
+                  9015179270
+                </strong>
+              </div>
+
+              <div>
+                <span>
                   Ciudad
                 </span>
 
@@ -323,46 +297,25 @@ export default function LegalPage() {
 
               <div>
                 <span>
-                  Razón social / NIT
+                  Correo electrónico
                 </span>
 
                 <strong>
-                  Pendiente de información
-                  empresarial definitiva
-                </strong>
-              </div>
-
-              <div>
-                <span>
-                  Correo de privacidad
-                </span>
-
-                <strong>
-                  Pendiente de información
-                  empresarial definitiva
+                  <a href="mailto:americastransportsas@gmail.com">
+                    americastransportsas@gmail.com
+                  </a>
                 </strong>
               </div>
             </div>
-
-            <p className="legal-warning">
-              Estos datos empresariales deben
-              completarse con la información
-              jurídica real de Americas Services
-              antes de publicar la versión
-              definitiva de la website.
-            </p>
 
             <h3>
               Autorización
             </h3>
 
             <p>
-              Cuando sea requerida, la
-              autorización para el tratamiento
-              será solicitada de manera previa,
-              expresa e informada, indicando las
-              finalidades correspondientes y
-              conservando evidencia susceptible
+              Cuando sea requerida, la autorización para el tratamiento será
+              solicitada de manera previa, expresa e informada, indicando las
+              finalidades correspondientes y conservando evidencia susceptible
               de consulta posterior.
             </p>
           </LegalSection>
@@ -374,30 +327,25 @@ export default function LegalPage() {
             title="¿Para qué usamos tus datos?"
           >
             <p>
-              La información suministrada podrá
-              utilizarse para las siguientes
+              La información suministrada podrá utilizarse para las siguientes
               finalidades, según corresponda:
             </p>
 
             <ul>
               <li>
-                Crear, autenticar y administrar
-                la cuenta del cliente.
+                Crear, autenticar y administrar la cuenta del cliente.
               </li>
 
               <li>
-                Identificar al cliente durante
-                la prestación de servicios.
+                Identificar al cliente durante la prestación de servicios.
               </li>
 
               <li>
-                Asociar vehículos a su
-                propietario.
+                Asociar vehículos a su propietario.
               </li>
 
               <li>
-                Registrar y consultar órdenes de
-                servicio.
+                Registrar y consultar órdenes de servicio.
               </li>
 
               <li>
@@ -405,36 +353,29 @@ export default function LegalPage() {
               </li>
 
               <li>
-                Emitir los documentos
-                tributarios o facturas que
-                correspondan.
+                Emitir los documentos tributarios o facturas que correspondan.
               </li>
 
               <li>
-                Gestionar el programa de puntos
-                y los niveles de membresía.
+                Gestionar el programa de puntos y los niveles de membresía.
               </li>
 
               <li>
-                Gestionar solicitudes,
-                consultas, reclamos y soporte.
+                Gestionar solicitudes, consultas, reclamos y soporte.
               </li>
 
               <li>
-                Prevenir fraude, abuso o accesos
-                no autorizados.
+                Prevenir fraude, abuso o accesos no autorizados.
               </li>
 
               <li>
-                Cumplir obligaciones legales,
-                contables, fiscales y
+                Cumplir obligaciones legales, contables, fiscales y
                 administrativas.
               </li>
 
               <li>
-                Enviar comunicaciones
-                promocionales cuando el cliente
-                las haya autorizado.
+                Enviar comunicaciones promocionales cuando el cliente las haya
+                autorizado.
               </li>
             </ul>
           </LegalSection>
@@ -446,11 +387,9 @@ export default function LegalPage() {
             title="Programa de fidelización"
           >
             <p>
-              Los clientes registrados podrán
-              participar en el programa de
-              fidelización de Americas Services
-              de acuerdo con las condiciones que
-              se encuentren vigentes.
+              Los clientes registrados podrán participar en el programa de
+              fidelización de Americas Services de acuerdo con las condiciones
+              que se encuentren vigentes.
             </p>
 
             <h3>
@@ -458,21 +397,15 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              Determinados productos o servicios
-              podrán otorgar puntos. La cantidad
-              otorgada dependerá de la
-              configuración vigente del
-              producto, servicio, promoción y
-              nivel de membresía.
+              Determinados productos o servicios podrán otorgar puntos. La
+              cantidad otorgada dependerá de la configuración vigente del
+              producto, servicio, promoción y nivel de membresía.
             </p>
 
             <p>
-              Salvo que Americas Services
-              indique expresamente lo contrario,
-              los puntos hacen parte del
-              programa de fidelización y no
-              constituyen dinero, saldo bancario
-              ni un instrumento de pago.
+              Salvo que Americas Services indique expresamente lo contrario,
+              los puntos hacen parte del programa de fidelización y no
+              constituyen dinero, saldo bancario ni un instrumento de pago.
             </p>
 
             <h3>
@@ -480,20 +413,14 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              La plataforma puede manejar
-              diferentes niveles de membresía,
-              cada uno con requisitos,
-              multiplicadores o beneficios
-              específicos.
+              La plataforma puede manejar diferentes niveles de membresía, cada
+              uno con requisitos, multiplicadores o beneficios específicos.
             </p>
 
             <p>
-              Los requisitos, beneficios,
-              multiplicadores y reglas podrán
-              modificarse prospectivamente.
-              Los cambios relevantes serán
-              comunicados por los canales
-              disponibles cuando corresponda.
+              Los requisitos, beneficios, multiplicadores y reglas podrán
+              modificarse prospectivamente. Los cambios relevantes serán
+              comunicados por los canales disponibles cuando corresponda.
             </p>
 
             <h3>
@@ -501,11 +428,9 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              Los beneficios disponibles para
-              redención estarán sujetos al saldo
-              de puntos del cliente, a las
-              condiciones del beneficio y a su
-              disponibilidad.
+              Los beneficios disponibles para redención estarán sujetos al
+              saldo de puntos del cliente, a las condiciones del beneficio y a
+              su disponibilidad.
             </p>
 
             <h3>
@@ -513,19 +438,14 @@ export default function LegalPage() {
             </h3>
 
             <p>
-              Cuando se habiliten las
-              integraciones con billeteras
-              digitales, Americas Services podrá
-              permitir al cliente incorporar su
-              tarjeta de membresía digital a
-              servicios compatibles.
+              Cuando se habiliten las integraciones con billeteras digitales,
+              Americas Services podrá permitir al cliente incorporar su tarjeta
+              de membresía digital a servicios compatibles.
             </p>
 
             <p>
-              Dichas funcionalidades podrán
-              estar igualmente sujetas a las
-              condiciones y políticas de los
-              proveedores tecnológicos
+              Dichas funcionalidades podrán estar igualmente sujetas a las
+              condiciones y políticas de los proveedores tecnológicos
               correspondientes.
             </p>
           </LegalSection>
@@ -537,24 +457,17 @@ export default function LegalPage() {
             title="Cookies y tecnologías similares"
           >
             <p>
-              La website puede utilizar
-              almacenamiento local del navegador
-              y otras tecnologías técnicas
-              necesarias para mantener la
-              autenticación, seguridad y
-              funcionamiento de determinadas
+              La website puede utilizar almacenamiento local del navegador y
+              otras tecnologías técnicas necesarias para mantener la
+              autenticación, seguridad y funcionamiento de determinadas
               funcionalidades.
             </p>
 
             <p>
-              En caso de incorporarse
-              posteriormente herramientas de
-              analítica, publicidad o tecnologías
-              no estrictamente necesarias, esta
-              política deberá actualizarse y se
-              implementarán los mecanismos de
-              información o consentimiento que
-              correspondan.
+              En caso de incorporarse posteriormente herramientas de analítica,
+              publicidad o tecnologías no estrictamente necesarias, esta
+              política deberá actualizarse y se implementarán los mecanismos
+              de información o consentimiento que correspondan.
             </p>
           </LegalSection>
 
@@ -565,23 +478,17 @@ export default function LegalPage() {
             title="Seguridad de la información"
           >
             <p>
-              Americas Services adoptará medidas
-              administrativas y tecnológicas
-              razonables destinadas a proteger
-              los datos personales frente a
-              pérdida, consulta, alteración,
-              acceso o tratamiento no autorizado.
+              Americas Services adoptará medidas administrativas y tecnológicas
+              razonables destinadas a proteger los datos personales frente a
+              pérdida, consulta, alteración, acceso o tratamiento no
+              autorizado.
             </p>
 
             <p>
-              Ningún sistema conectado a
-              Internet puede garantizar un riesgo
-              absolutamente nulo. Por ello,
-              también recomendamos a los
-              clientes proteger sus
-              credenciales, utilizar
-              contraseñas seguras y no compartir
-              sus mecanismos de acceso.
+              Ningún sistema conectado a Internet puede garantizar un riesgo
+              absolutamente nulo. Por ello, también recomendamos a los clientes
+              proteger sus credenciales, utilizar contraseñas seguras y no
+              compartir sus mecanismos de acceso.
             </p>
           </LegalSection>
 
@@ -592,27 +499,22 @@ export default function LegalPage() {
             title="Derechos del titular"
           >
             <p>
-              De acuerdo con la legislación
-              colombiana aplicable, el titular
-              podrá ejercer los derechos que le
-              correspondan respecto de su
+              De acuerdo con la legislación colombiana aplicable, el titular
+              podrá ejercer los derechos que le correspondan respecto de su
               información personal.
             </p>
 
             <ul>
               <li>
-                Conocer y acceder a sus datos
-                personales.
+                Conocer y acceder a sus datos personales.
               </li>
 
               <li>
-                Solicitar su actualización o
-                rectificación.
+                Solicitar su actualización o rectificación.
               </li>
 
               <li>
-                Solicitar información sobre el
-                tratamiento realizado.
+                Solicitar información sobre el tratamiento realizado.
               </li>
 
               <li>
@@ -620,20 +522,16 @@ export default function LegalPage() {
               </li>
 
               <li>
-                Solicitar la supresión cuando
-                resulte procedente.
+                Solicitar la supresión cuando resulte procedente.
               </li>
 
               <li>
-                Revocar autorizaciones cuando
-                legalmente sea posible.
+                Revocar autorizaciones cuando legalmente sea posible.
               </li>
 
               <li>
-                Presentar quejas ante la
-                autoridad competente después de
-                agotar los procedimientos que
-                resulten aplicables.
+                Presentar quejas ante la autoridad competente después de agotar
+                los procedimientos que resulten aplicables.
               </li>
             </ul>
           </LegalSection>
@@ -645,22 +543,49 @@ export default function LegalPage() {
             title="Consultas, solicitudes y reclamos"
           >
             <p>
-              Americas Services dispondrá de un
-              canal para que los titulares
-              presenten consultas, solicitudes
-              de actualización, rectificación,
-              supresión, revocatoria y demás
-              peticiones relacionadas con sus
-              datos personales.
+              Los titulares podrán presentar consultas, solicitudes de
+              actualización, rectificación, supresión, revocatoria y demás
+              peticiones relacionadas con sus datos personales a través del
+              correo electrónico dispuesto por la empresa.
             </p>
 
+            <div className="legal-data-box">
+              <div>
+                <span>
+                  Responsable
+                </span>
+
+                <strong>
+                  AMERICA S TRANSPORT S A S
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  NIT
+                </span>
+
+                <strong>
+                  9015179270
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  Correo de contacto
+                </span>
+
+                <strong>
+                  <a href="mailto:americastransportsas@gmail.com">
+                    americastransportsas@gmail.com
+                  </a>
+                </strong>
+              </div>
+            </div>
+
             <p>
-              El correo, dirección y datos de
-              identificación jurídica
-              definitivos deberán incorporarse
-              en esta sección antes de la
-              publicación oficial de estas
-              políticas.
+              Las solicitudes serán atendidas de acuerdo con los procedimientos
+              y términos establecidos por la normativa colombiana aplicable.
             </p>
           </LegalSection>
 
@@ -674,22 +599,18 @@ export default function LegalPage() {
             </h2>
 
             <p>
-              Americas Services podrá actualizar
-              estos términos y políticas cuando
-              sea necesario por cambios
-              operativos, tecnológicos,
+              Americas Services podrá actualizar estos términos y políticas
+              cuando sea necesario por cambios operativos, tecnológicos,
               comerciales o normativos.
             </p>
 
             <p>
-              La versión publicada en esta
-              página indicará su fecha de última
+              La versión publicada en esta página indicará su fecha de última
               actualización.
             </p>
 
             <strong>
-              Última actualización:
-              {" "}
+              Última actualización:{" "}
               {LAST_UPDATE}
             </strong>
           </section>
@@ -757,10 +678,8 @@ function LegalIntro() {
         </h2>
 
         <p>
-          Esta información explica de forma
-          clara cómo funciona la plataforma y
-          cómo se gestiona la información
-          proporcionada por nuestros clientes.
+          Esta información explica de forma clara cómo funciona la plataforma y
+          cómo se gestiona la información proporcionada por nuestros clientes.
         </p>
       </div>
     </section>

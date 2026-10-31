@@ -1,3 +1,5 @@
+import heroVideo from "@/assets/videos/hero-americas.mp4";
+
 import {
   useState,
 } from "react";
@@ -9,58 +11,89 @@ import {
 
 import logo from "@/assets/logo/logoN.png";
 
-import { useAuth } from "@/hooks/useAuth";
+import {
+  useAuth,
+} from "@/hooks/useAuth";
 
 export default function LoginPage() {
-  const { login } = useAuth();
+  const {
+    login,
+  } = useAuth();
 
-  const navigate = useNavigate();
+  const navigate =
+    useNavigate();
 
-  const [email, setEmail] =
-    useState("");
+  const [
+    email,
+    setEmail,
+  ] = useState("");
 
-  const [password, setPassword] =
-    useState("");
+  const [
+    password,
+    setPassword,
+  ] = useState("");
 
-  const [error, setError] =
-    useState<string | null>(null);
+  const [
+    error,
+    setError,
+  ] = useState<string | null>(
+    null
+  );
 
-  const [isSubmitting, setIsSubmitting] =
-    useState(false);
+  const [
+    isSubmitting,
+    setIsSubmitting,
+  ] = useState(false);
 
-  const handleSubmit = async (
-    event: React.FormEvent
-  ): Promise<void> => {
-    event.preventDefault();
+  const handleSubmit =
+    async (
+      event: React.FormEvent
+    ): Promise<void> => {
+      event.preventDefault();
 
-    setError(null);
-    setIsSubmitting(true);
+      setError(null);
+      setIsSubmitting(true);
 
-    try {
-      await login(
-        email.trim(),
-        password
-      );
+      try {
+        await login(
+          email.trim(),
+          password
+        );
 
-      navigate(
-        "/profile",
-        {
-          replace: true,
-        }
-      );
-    } catch (exception) {
-      setError(
-        exception instanceof Error
-          ? exception.message
-          : "No fue posible iniciar sesión."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+        navigate(
+          "/profile",
+          {
+            replace: true,
+          }
+        );
+      } catch (exception) {
+        setError(
+          exception instanceof Error
+            ? exception.message
+            : "No fue posible iniciar sesión."
+        );
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
 
   return (
     <section className="login-page">
+      <video
+        className="auth-background-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source
+          src={heroVideo}
+          type="video/mp4"
+        />
+      </video>
+
       <div className="login-overlay" />
 
       <div className="login-card">
@@ -144,7 +177,9 @@ export default function LoginPage() {
         </form>
 
         <div className="login-divider">
-          <span>o</span>
+          <span>
+            o
+          </span>
         </div>
 
         <Link

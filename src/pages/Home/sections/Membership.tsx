@@ -5,7 +5,7 @@ export default function Membership() {
   return (
     <section className="section home-membership-section">
       <div className="container">
-          <div className="membership-premium">
+        <div className="membership-premium">
           <FadeIn className="membership-image" direction="right">
             <img
               src={membershipImage}
@@ -32,37 +32,110 @@ export default function Membership() {
 
             <div className="membership-grid">
               <FadeIn className="fade-in-grid-item membership-benefit">
-                <span className="membership-benefit-check" aria-hidden="true">✓</span>
-                <span>Lavados ilimitados</span>
+                <span
+                  className="membership-benefit-check"
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  Lavados ilimitados
+                </span>
               </FadeIn>
-              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.06}>
-                <span className="membership-benefit-check" aria-hidden="true">✓</span>
-                <span>Puntos dobles</span>
+
+              <FadeIn
+                className="fade-in-grid-item membership-benefit"
+                delay={0.06}
+              >
+                <span
+                  className="membership-benefit-check"
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  Puntos dobles
+                </span>
               </FadeIn>
-              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.12}>
-                <span className="membership-benefit-check" aria-hidden="true">✓</span>
-                <span>Descuentos en servicios</span>
+
+              <FadeIn
+                className="fade-in-grid-item membership-benefit"
+                delay={0.12}
+              >
+                <span
+                  className="membership-benefit-check"
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  Descuentos en servicios
+                </span>
               </FadeIn>
-              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.18}>
-                <span className="membership-benefit-check" aria-hidden="true">✓</span>
-                <span>Café mensual gratis</span>
+
+              <FadeIn
+                className="fade-in-grid-item membership-benefit"
+                delay={0.18}
+              >
+                <span
+                  className="membership-benefit-check"
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  Café mensual gratis
+                </span>
               </FadeIn>
-              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.24}>
-                <span className="membership-benefit-check" aria-hidden="true">✓</span>
-                <span>Coworking preferencial</span>
+
+              <FadeIn
+                className="fade-in-grid-item membership-benefit"
+                delay={0.24}
+              >
+                <span
+                  className="membership-benefit-check"
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  Coworking preferencial
+                </span>
               </FadeIn>
-              <FadeIn className="fade-in-grid-item membership-benefit" delay={0.3}>
-                <span className="membership-benefit-check" aria-hidden="true">✓</span>
-                <span>Atención prioritaria</span>
+
+              <FadeIn
+                className="fade-in-grid-item membership-benefit"
+                delay={0.3}
+              >
+                <span
+                  className="membership-benefit-check"
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  Atención prioritaria
+                </span>
               </FadeIn>
             </div>
 
-            <button
-              type="button"
-              className="button"
-            >
-              Adquirir Membresía
-            </button>
+          <div className="membership-coming-soon">
+            <span className="membership-coming-soon-label">
+              ADQUIERE TU MEMBRESÍA
+            </span>
+
+            <p>
+              Haz parte de American Services y disfruta una experiencia pensada
+              para premiar tu fidelidad con beneficios, atención preferencial
+              y ventajas exclusivas.
+            </p>
+          </div>
           </FadeIn>
         </div>
       </div>

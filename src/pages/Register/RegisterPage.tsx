@@ -1,3 +1,5 @@
+import heroVideo from "@/assets/videos/hero-americas.mp4";
+
 import {
   useState,
 } from "react";
@@ -56,12 +58,16 @@ export default function RegisterPage() {
   ] = useState("");
 
   const [
+    acceptedTerms,
+    setAcceptedTerms,
+  ] = useState(false);
+
+  const [
     error,
     setError,
-  ] =
-    useState<string | null>(
-      null
-    );
+  ] = useState<string | null>(
+    null
+  );
 
   const [
     validationErrors,
@@ -87,6 +93,14 @@ export default function RegisterPage() {
       ) {
         setError(
           "Debes ingresar el número de documento."
+        );
+
+        return;
+      }
+
+      if (!acceptedTerms) {
+        setError(
+          "Debes aceptar los términos y condiciones para crear tu cuenta."
         );
 
         return;
@@ -147,8 +161,7 @@ export default function RegisterPage() {
         }
 
         setError(
-          exception
-          instanceof Error
+          exception instanceof Error
             ? exception.message
             : "No fue posible crear la cuenta."
         );
@@ -161,6 +174,21 @@ export default function RegisterPage() {
 
   return (
     <section className="register-page">
+      <video
+        className="auth-background-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source
+          src={heroVideo}
+          type="video/mp4"
+        />
+      </video>
+
       <div className="register-overlay" />
 
       <div className="register-card">
@@ -187,9 +215,8 @@ export default function RegisterPage() {
         </h1>
 
         <p>
-          Regístrate y comienza a
-          acumular puntos y beneficios
-          en American Services.
+          Regístrate y comienza a acumular puntos y beneficios en American
+          Services.
         </p>
 
         <form
@@ -286,6 +313,39 @@ export default function RegisterPage() {
             />
           </div>
 
+          <label className="register-terms">
+            <input
+              type="checkbox"
+              checked={acceptedTerms}
+              disabled={isSubmitting}
+              onChange={(event) =>
+                setAcceptedTerms(
+                  event.target.checked
+                )
+              }
+              required
+            />
+
+            <span
+              className="register-terms-check"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <span className="register-terms-text">
+              Acepto los{" "}
+              <Link
+                to="/legal#terminos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                términos y condiciones
+              </Link>
+              .
+            </span>
+          </label>
+
           {error && (
             <div
               role="alert"
@@ -317,7 +377,10 @@ export default function RegisterPage() {
           <button
             type="submit"
             className="btn-primary"
-            disabled={isSubmitting}
+            disabled={
+              isSubmitting ||
+              !acceptedTerms
+            }
           >
             {isSubmitting
               ? "Creando cuenta..."
